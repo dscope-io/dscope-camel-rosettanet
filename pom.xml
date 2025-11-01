@@ -1,0 +1,111 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>io.dscope</groupId>
+  <artifactId>dscope-camel-rosettanet</artifactId>
+  <version>0.1.0</version>
+  <name>dScopeCamelRosettaNet</name>
+  <description>Apache Camel RosettaNet Component</description>
+  
+<properties>
+	<jdk.version>21</jdk.version>
+	<slf4j.version>2.0.16</slf4j.version>
+	<camel.version>4.14.1</camel.version>
+	<maven.compiler.source>21</maven.compiler.source>
+	<maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
+	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <!-- plugin versions -->
+    <version.plugin.compiler>3.13.0</version.plugin.compiler>
+    <version.plugin.dependency>3.0.0</version.plugin.dependency>
+    <version.plugin.jar>3.0.2</version.plugin.jar>
+    <version.plugin.resources>2.7</version.plugin.resources>
+    <maven.test.skip>true</maven.test.skip>
+</properties>
+
+<dependencies>	
+	<!-- Apache Camel Core -->
+	<dependency>
+	    <groupId>org.apache.camel</groupId>
+	    <artifactId>camel-core</artifactId>
+	    <version>${camel.version}</version>
+	</dependency>
+	
+	<!-- RosettaNet Jakarta JAXB Library -->
+	<dependency>
+	    <groupId>io.dscope</groupId>
+	    <artifactId>dscope-rosettanet-jakarta-jaxb</artifactId>
+	    <version>0.5.0</version>
+	</dependency>	
+	
+	<!-- Jakarta JAXB API -->
+	<dependency>
+	    <groupId>jakarta.xml.bind</groupId>
+	    <artifactId>jakarta.xml.bind-api</artifactId>
+	    <version>4.0.4</version>
+	</dependency>		
+	
+	<!-- JAXB Runtime -->
+	<dependency>
+	    <groupId>org.glassfish.jaxb</groupId>
+	    <artifactId>jaxb-runtime</artifactId>
+	    <version>4.0.5</version>
+	</dependency>	
+	
+	<!-- SLF4J API -->
+	<dependency>
+	    <groupId>org.slf4j</groupId>
+	    <artifactId>slf4j-api</artifactId>
+	    <version>${slf4j.version}</version>
+	</dependency>
+	
+	<!-- Test Dependencies -->
+	<dependency>
+	    <groupId>org.apache.camel</groupId>
+	    <artifactId>camel-test-junit5</artifactId>
+	    <version>${camel.version}</version>
+	    <scope>test</scope>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.slf4j</groupId>
+	    <artifactId>slf4j-simple</artifactId>
+	    <version>${slf4j.version}</version>
+	    <scope>test</scope>
+	</dependency>
+		
+</dependencies>
+
+<build>
+	<sourceDirectory>src/main/java</sourceDirectory>
+	<resources>
+		<resource>
+			<directory>src/main/resources</directory>
+		</resource>
+	</resources>	
+	<plugins>
+       <plugin>
+            <artifactId>maven-compiler-plugin</artifactId>
+             <version>${version.plugin.compiler}</version>
+        </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-toolchains-plugin</artifactId>
+            <version>3.1.0</version>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>toolchain</goal>
+                    </goals>
+                </execution>
+            </executions>
+            <configuration>
+                <toolchains>
+                    <jdk>
+                        <version>21</version>
+                    </jdk>
+                </toolchains>
+            </configuration>
+        </plugin>     
+	</plugins>
+</build>
+
+</project>
