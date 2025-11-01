@@ -1,0 +1,97 @@
+- route:
+    id: rosettanet-pip3a4-demo
+    from:
+      uri: timer:demo
+      parameters:
+        period: 5000
+        repeatCount: 1
+      steps:
+        - log:
+            message: "Starting RosettaNet PIP 3A4 demonstration..."
+        
+        # Create a sample PurchaseOrderRequest XML
+        - setBody:
+            constant: |
+              <?xml version="1.0" encoding="UTF-8"?>
+              <PurchaseOrderRequest xmlns="urn:rosettanet:specification:interchange:PurchaseOrderRequest:xsd:schema:02.05">
+                <fromRole>
+                  <PartnerRoleDescription>
+                    <GlobalBusinessIdentifier>123456789</GlobalBusinessIdentifier>
+                    <ContactInformation>
+                      <contactName>
+                        <FreeFormText>John Doe</FreeFormText>
+                      </contactName>
+                      <EmailAddress>john.doe@example.com</EmailAddress>
+                    </ContactInformation>
+                  </PartnerRoleDescription>
+                </fromRole>
+                <toRole>
+                  <PartnerRoleDescription>
+                    <GlobalBusinessIdentifier>987654321</GlobalBusinessIdentifier>
+                    <ContactInformation>
+                      <contactName>
+                        <FreeFormText>Jane Smith</FreeFormText>
+                      </contactName>
+                      <EmailAddress>jane.smith@example.com</EmailAddress>
+                    </ContactInformation>
+                  </PartnerRoleDescription>
+                </toRole>
+                <thisDocumentIdentifier>
+                  <ProprietaryDocumentIdentifier>PO-2024-001</ProprietaryDocumentIdentifier>
+                </thisDocumentIdentifier>
+                <thisDocumentGenerationDateTime>2024-01-15T10:30:00Z</thisDocumentGenerationDateTime>
+                <PurchaseOrder>
+                  <orderIdentifier>
+                    <ProprietaryDocumentIdentifier>ORDER-123</ProprietaryDocumentIdentifier>
+                  </orderIdentifier>
+                  <orderIssueDate>2024-01-15</orderIssueDate>
+                  <OrderLineItem>
+                    <lineNumber>1</lineNumber>
+                    <ProductLineItem>
+                      <productIdentifier>
+                        <ProprietaryProductIdentifier>PROD-001</ProprietaryProductIdentifier>
+                      </productIdentifier>
+                      <requestedQuantity>
+                        <ProductQuantity>
+                          <value>10</value>
+                        </ProductQuantity>
+                      </requestedQuantity>
+                      <requestedUnitPrice>
+                        <FinancialAmount>
+                          <MonetaryAmount>
+                            <value>99.99</value>
+                          </MonetaryAmount>
+                        </FinancialAmount>
+                      </requestedUnitPrice>
+                    </ProductLineItem>
+                  </OrderLineItem>
+                </PurchaseOrder>
+              </PurchaseOrderRequest>
+        
+        - log:
+            message: "Created sample PurchaseOrderRequest XML body"
+        
+        # Unmarshal the XML to Java object using RosettaNet component
+        - to:
+            uri: rosettanet:unmarshal
+            parameters:
+              pipType: PIP3A4
+              version: "02_05"
+              messageName: PurchaseOrderRequest
+        
+        - log:
+            message: "Successfully unmarshalled XML to Java object: ${body.class.simpleName}"
+        
+        # Marshal the Java object back to XML
+        - to:
+            uri: rosettanet:marshal
+            parameters:
+              pipType: PIP3A4
+              version: "02_05"
+              messageName: PurchaseOrderRequest
+        
+        - log:
+            message: "Successfully marshalled Java object back to XML"
+        
+        - log:
+            message: "RosettaNet PIP 3A4 demonstration completed successfully!"
