@@ -44,3 +44,6 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Build artifacts
+META-INF/MANIFEST.MF
