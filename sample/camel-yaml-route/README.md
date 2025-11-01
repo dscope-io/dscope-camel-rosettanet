@@ -32,7 +32,7 @@ camel-yaml-route/
 
 The route performs the following steps:
 
-1. **Timer Trigger**: Starts automatically using a timer (runs once after 60 seconds)
+1. **Timer Trigger**: Starts automatically using a timer (runs once immediately)
 2. **Sample XML**: Sets a sample RosettaNet PIP 3A4 Purchase Order Request XML message as the message body
 3. **Unmarshal**: Unmarshals the XML into a Java object using the RosettaNet component
 4. **Marshal**: Marshals the Java object back into XML format
