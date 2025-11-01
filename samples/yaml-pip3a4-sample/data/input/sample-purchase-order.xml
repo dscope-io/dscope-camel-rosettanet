@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Sample RosettaNet PIP3A4 Purchase Order Request -->
+<PurchaseOrderRequest xmlns="urn:rosettanet:specification:domain:Procurement:PurchaseOrderRequest:2:5">
+    <thisDocumentIdentifier>
+        <ProprietaryDocumentIdentifier>PO-12345</ProprietaryDocumentIdentifier>
+    </thisDocumentIdentifier>
+    <thisDocumentGenerationDateTime>
+        <DateTimeStamp>2025-11-01T10:30:00Z</DateTimeStamp>
+    </thisDocumentGenerationDateTime>
+    <PurchaseOrder>
+        <purchaseOrderIdentifier>
+            <ProprietaryDocumentIdentifier>PO-12345</ProprietaryDocumentIdentifier>
+        </purchaseOrderIdentifier>
+        <requestedShipDateTime>
+            <DatePeriod>
+                <beginDate>
+                    <DateStamp>2025-11-15</DateStamp>
+                </beginDate>
+            </DatePeriod>
+        </requestedShipDateTime>
+        <ProductLineItem>
+            <productLineItemIdentifier>
+                <ProprietaryDocumentIdentifier>1</ProprietaryDocumentIdentifier>
+            </productLineItemIdentifier>
+            <ProductInformation>
+                <ProductIdentification>
+                    <PartnerProductIdentification>PROD-001</PartnerProductIdentification>
+                </ProductIdentification>
+                <ProductDescription>
+                    <ProductDescriptionText>Sample Product</ProductDescriptionText>
+                </ProductDescription>
+            </ProductInformation>
+            <requestedQuantity>
+                <ProductQuantity>
+                    <QuantityValue>100</QuantityValue>
+                </ProductQuantity>
+            </requestedQuantity>
+            <totalAmount>
+                <FinancialAmount>
+                    <MonetaryAmount>2599.00</MonetaryAmount>
+                </FinancialAmount>
+            </totalAmount>
+        </ProductLineItem>
+    </PurchaseOrder>
+</PurchaseOrderRequest>
