@@ -1,0 +1,71 @@
+- route:
+    id: rosettanet-pip3a4-unmarshal-route
+    from:
+      uri: timer:unmarshal-timer
+      parameters:
+        period: 10000
+        repeatCount: 1
+      steps:
+        - log:
+            message: "Starting RosettaNet PIP 3A4 unmarshal example"
+        - set-body:
+            constant: |
+              <?xml version="1.0" encoding="UTF-8"?>
+              <Pip3A4PurchaseOrderRequest xmlns="urn:rosettanet:specification:interchange:PurchaseOrderRequest:xsd:schema:02.05">
+                <fromRole>
+                  <PartnerRoleDescription>
+                    <GlobalBusinessIdentifier>123456789</GlobalBusinessIdentifier>
+                    <ContactInformation>
+                      <contactName>
+                        <FreeFormText>John Doe</FreeFormText>
+                      </contactName>
+                      <EmailAddress>john.doe@example.com</EmailAddress>
+                    </ContactInformation>
+                  </PartnerRoleDescription>
+                </fromRole>
+                <toRole>
+                  <PartnerRoleDescription>
+                    <GlobalBusinessIdentifier>987654321</GlobalBusinessIdentifier>
+                    <ContactInformation>
+                      <contactName>
+                        <FreeFormText>Jane Smith</FreeFormText>
+                      </contactName>
+                      <EmailAddress>jane.smith@example.com</EmailAddress>
+                    </ContactInformation>
+                  </PartnerRoleDescription>
+                </toRole>
+                <thisDocumentIdentifier>
+                  <ProprietaryDocumentIdentifier>PO-2025-001</ProprietaryDocumentIdentifier>
+                </thisDocumentIdentifier>
+              </Pip3A4PurchaseOrderRequest>
+        - log:
+            message: "Processing RosettaNet PIP 3A4 message (unmarshal)"
+        - to:
+            uri: rosettanet:unmarshal
+            parameters:
+              pipType: PIP3A4
+              version: 02_05
+        - log:
+            message: "Message unmarshalled successfully: ${body}"
+
+- route:
+    id: rosettanet-pip3a4-marshal-route
+    from:
+      uri: timer:marshal-timer
+      parameters:
+        period: 15000
+        repeatCount: 1
+      steps:
+        - log:
+            message: "Starting RosettaNet PIP 3A4 marshal example"
+        - set-body:
+            constant: "Sample RosettaNet object to marshal"
+        - log:
+            message: "Processing RosettaNet PIP 3A4 message (marshal)"
+        - to:
+            uri: rosettanet:marshal
+            parameters:
+              pipType: PIP3A4
+              version: 02_05
+        - log:
+            message: "Message marshalled successfully: ${body}"
