@@ -1,0 +1,60 @@
+- route:
+    id: rosettanet-pip3a4-unmarshal-route
+    from:
+      uri: timer:rosettanet-demo
+      parameters:
+        period: 60000
+        repeatCount: 1
+      steps:
+        - log:
+            message: "Starting RosettaNet PIP 3A4 sample route"
+        - setBody:
+            constant: |
+              <?xml version="1.0" encoding="UTF-8"?>
+              <Pip3A4PurchaseOrderRequest xmlns="urn:rosettanet:specification:domain:Procurement:xsd:schema:02.25" xmlns:ns2="urn:rosettanet:specification:universal:Dates:xsd:schema:01.04">
+                <ProductLineItem>
+                  <productUnit>
+                    <ProductPackageDescription>
+                      <ProductDescription>Sample Product</ProductDescription>
+                    </ProductPackageDescription>
+                  </productUnit>
+                  <requestedShipFrom>
+                    <PhysicalLocation>
+                      <locationIdentifier>
+                        <ProprietaryIdentifier>
+                          <content>SHIP001</content>
+                        </ProprietaryIdentifier>
+                      </locationIdentifier>
+                    </PhysicalLocation>
+                  </requestedShipFrom>
+                  <requestedShipTo>
+                    <PhysicalLocation>
+                      <locationIdentifier>
+                        <ProprietaryIdentifier>
+                          <content>DEST001</content>
+                        </ProprietaryIdentifier>
+                      </locationIdentifier>
+                    </PhysicalLocation>
+                  </requestedShipTo>
+                </ProductLineItem>
+              </Pip3A4PurchaseOrderRequest>
+        - log:
+            message: "Processing RosettaNet PIP 3A4 message body: ${body}"
+        - to:
+            uri: rosettanet:unmarshal
+            parameters:
+              pipType: PIP3A4
+              version: "02_25"
+              messageName: PurchaseOrderRequest
+        - log:
+            message: "Successfully unmarshalled PIP 3A4 message: ${body}"
+        - to:
+            uri: rosettanet:marshal
+            parameters:
+              pipType: PIP3A4
+              version: "02_25"
+              messageName: PurchaseOrderRequest
+        - log:
+            message: "Successfully marshalled PIP 3A4 message back to XML"
+        - log:
+            message: "Sample completed successfully"
