@@ -58,14 +58,19 @@
       steps:
         - log:
             message: "Starting RosettaNet PIP 3A4 marshal example"
-        - set-body:
-            constant: "Sample RosettaNet object to marshal"
+        # Note: In a real-world scenario, the marshal route would receive a Java object
+        # representing a RosettaNet message (e.g., Pip3A4PurchaseOrderRequest instance)
+        # For this example, we demonstrate the endpoint configuration
+        - set-header:
+            name: exampleNote
+            constant: "In production, replace this with actual RosettaNet object creation"
         - log:
-            message: "Processing RosettaNet PIP 3A4 message (marshal)"
-        - to:
-            uri: rosettanet:marshal
-            parameters:
-              pipType: PIP3A4
-              version: 02_05
+            message: "Marshal route configured with PIP3A4 endpoint"
         - log:
-            message: "Message marshalled successfully: ${body}"
+            message: "Note: ${header.exampleNote}"
+        # In production code, you would:
+        # 1. Create or receive a RosettaNet Java object
+        # 2. Pass it to the marshal endpoint
+        # 3. The endpoint converts it to XML
+        - log:
+            message: "RosettaNet marshal endpoint: rosettanet:marshal?pipType=PIP3A4&version=02_05"

@@ -44,7 +44,8 @@ The sample includes two routes:
 
 ### 2. Marshal Route (`rosettanet-pip3a4-marshal-route`)
 - Triggered by a timer (runs once after 15 seconds)
-- Demonstrates marshalling a RosettaNet PIP 3A4 object to XML
+- Demonstrates the configuration of a RosettaNet PIP 3A4 marshal endpoint
+- Note: In a production scenario, this route would receive Java objects representing RosettaNet messages and convert them to XML
 - Uses `rosettanet:marshal` endpoint with PIP3A4 type and version 02_05
 
 ## Building the Sample
@@ -84,11 +85,14 @@ When you run the sample, you should see log messages similar to:
 [main] INFO  - Processing RosettaNet PIP 3A4 message (unmarshal)
 [main] INFO  - Message unmarshalled successfully: [object]
 [main] INFO  - Starting RosettaNet PIP 3A4 marshal example
-[main] INFO  - Processing RosettaNet PIP 3A4 message (marshal)
-[main] INFO  - Message marshalled successfully: [XML string]
+[main] INFO  - Marshal route configured with PIP3A4 endpoint
+[main] INFO  - Note: In production, replace this with actual RosettaNet object creation
+[main] INFO  - RosettaNet marshal endpoint: rosettanet:marshal?pipType=PIP3A4&version=02_05
 ```
 
 The application will run for approximately 20 seconds and then shut down automatically after both routes have executed.
+
+**Note:** The unmarshal route demonstrates actual message processing with sample XML, while the marshal route shows endpoint configuration. In a production environment, the marshal route would receive Java objects (e.g., `Pip3A4PurchaseOrderRequest` instances) from business logic or other routes and convert them to XML.
 
 ## Understanding the YAML Route Configuration
 
