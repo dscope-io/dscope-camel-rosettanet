@@ -18,7 +18,6 @@
     <version.plugin.dependency>3.0.0</version.plugin.dependency>
     <version.plugin.jar>3.0.2</version.plugin.jar>
     <version.plugin.resources>2.7</version.plugin.resources>
-    <maven.test.skip>true</maven.test.skip>
 </properties>
 
 <dependencies>	
