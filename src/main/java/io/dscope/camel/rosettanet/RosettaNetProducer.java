@@ -101,7 +101,7 @@ public class RosettaNetProducer extends DefaultAsyncProducer {
 			// Get the message definition from the dictionary
 			Optional<MessageDefinition> definition = RosettaNetDictionary.findMessage(pipType, version, messageName);
 			
-			if (!definition.isPresent()) {
+			if (definition.isEmpty()) {
 				throw new IllegalArgumentException("No message definition found for PIP type: " + pipType + 
 						", version: " + version + ", messageName: " + messageName);
 			}
@@ -163,7 +163,7 @@ public class RosettaNetProducer extends DefaultAsyncProducer {
 			// Get the message definition from the dictionary
 			Optional<MessageDefinition> definition = RosettaNetDictionary.findMessage(pipType, version, messageName);
 			
-			if (!definition.isPresent()) {
+			if (definition.isEmpty()) {
 				throw new IllegalArgumentException("No message definition found for PIP type: " + pipType + 
 						", version: " + version + ", messageName: " + messageName);
 			}

@@ -28,12 +28,6 @@ import static org.junit.jupiter.api.Assertions.*;
 public class RosettaNetCamelTest extends CamelTestSupport {
 
 	@Override
-	protected CamelContext createCamelContext() throws Exception {
-		CamelContext context = super.createCamelContext();
-		return context;
-	}
-
-	@Override
 	protected RouteBuilder createRouteBuilder() throws Exception {
 		return new RouteBuilder() {
 			@Override

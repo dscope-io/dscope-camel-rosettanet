@@ -35,7 +35,7 @@ public class RosettaNetEndpoint extends DefaultEndpoint {
 	private static final Logger LOG = LoggerFactory.getLogger(RosettaNetEndpoint.class);
 	
 	@UriPath(label = "common",  enums = "marshal,unmarshal")
-	@Metadata(description = "The type of RosettaNet operation to use",required = true)
+	@Metadata(description = "The type of RosettaNet operation to use", required = true)
     private String methodType;	
 	
 	@UriParam(label = "common", enums = "xml")
