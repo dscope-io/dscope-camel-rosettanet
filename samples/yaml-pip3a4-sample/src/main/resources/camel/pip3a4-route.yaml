@@ -15,41 +15,37 @@
               version: "02_05"
               messageName: PurchaseOrderRequest
         - log:
-            message: "Successfully unmarshalled PIP3A4 message"
-        - marshal:
-            json: {}
+            message: "Unmarshalled ProprietaryDocumentIdentifier: ${body.documentHeader.value.documentInformation.value.documentIdentification.value.identifier}"
+        - to:
+            uri: rosettanet:marshal
+            parameters:
+              pipType: PIP3A4
+              version: "02_05"
+              messageName: PurchaseOrderRequest
         - to:
             uri: file:data/output
             parameters:
-              fileName: "${header.CamelFileName}.json"
+              fileName: "${header.CamelFileName}.normalized.xml"
 
 - route:
     id: pip3a4-marshal-route
     from:
-      uri: timer:marshal
-      parameters:
-        period: 60000
-        repeatCount: 1
+      uri: timer://marshal?period=60s&repeatCount=1
       steps:
         - log:
             message: "Creating sample RosettaNet PIP3A4 Purchase Order Request"
         - setBody:
-            constant: |
-              {
-                "orderNumber": "PO-12345",
-                "orderDate": "2025-11-01",
-                "items": [
-                  {
-                    "productId": "PROD-001",
-                    "quantity": 100,
-                    "unitPrice": 25.99
-                  }
-                ]
-              }
-        - unmarshal:
-            json: {}
+            simple: "resource:file:data/input/sample-purchase-order.xml"
+        - to:
+            uri: rosettanet:unmarshal
+            parameters:
+              pipType: PIP3A4
+              version: "02_05"
+              messageName: PurchaseOrderRequest
         - log:
-            message: "Marshalling to RosettaNet PIP3A4 format"
+            message: "Unmarshalled ProprietaryDocumentIdentifier: ${body.documentHeader.value.documentInformation.value.documentIdentification.value.identifier}"
+        - log:
+            message: "Loaded JAXB purchase order bean: ${body.getClass().name}"
         - to:
             uri: rosettanet:marshal
             parameters:

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Sample RosettaNet PIP3A4 Purchase Order Request -->
-<PurchaseOrderRequest xmlns="urn:rosettanet:specification:domain:Procurement:PurchaseOrderRequest:2:5">
+<PurchaseOrderRequest xmlns="urn:rosettanet:specification:interchange:PurchaseOrderRequest:xsd:schema:02.05">
     <thisDocumentIdentifier>
         <ProprietaryDocumentIdentifier>PO-12345</ProprietaryDocumentIdentifier>
     </thisDocumentIdentifier>
