@@ -1,0 +1,58 @@
+- route:
+    id: pip3a4-unmarshal-route
+    from:
+      uri: file:data/input
+      parameters:
+        noop: true
+        delay: 5000
+      steps:
+        - log:
+            message: "Processing RosettaNet PIP3A4 message: ${header.CamelFileName}"
+        - to:
+            uri: rosettanet:unmarshal
+            parameters:
+              pipType: PIP3A4
+              version: "02_05"
+              messageName: PurchaseOrderRequest
+        - log:
+            message: "Unmarshalled ProprietaryDocumentIdentifier: ${body.documentHeader.value.documentInformation.value.documentIdentification.value.identifier}"
+        - to:
+            uri: rosettanet:marshal
+            parameters:
+              pipType: PIP3A4
+              version: "02_05"
+              messageName: PurchaseOrderRequest
+        - to:
+            uri: file:data/output
+            parameters:
+              fileName: "${header.CamelFileName}.normalized.xml"
+
+- route:
+    id: pip3a4-marshal-route
+    from:
+      uri: timer://marshal?period=60s&repeatCount=1
+      steps:
+        - log:
+            message: "Creating sample RosettaNet PIP3A4 Purchase Order Request"
+        - setBody:
+            simple: "resource:file:data/input/sample-purchase-order.xml"
+        - to:
+            uri: rosettanet:unmarshal
+            parameters:
+              pipType: PIP3A4
+              version: "02_05"
+              messageName: PurchaseOrderRequest
+        - log:
+            message: "Unmarshalled ProprietaryDocumentIdentifier: ${body.documentHeader.value.documentInformation.value.documentIdentification.value.identifier}"
+        - log:
+            message: "Loaded JAXB purchase order bean: ${body.getClass().name}"
+        - to:
+            uri: rosettanet:marshal
+            parameters:
+              pipType: PIP3A4
+              version: "02_05"
+              messageName: PurchaseOrderRequest
+        - to:
+            uri: file:data/output
+            parameters:
+              fileName: "sample-po-request.xml"

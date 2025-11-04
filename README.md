@@ -81,6 +81,12 @@ from("direct:start")
     .to("log:output");
 ```
 
+## Samples
+
+Check out the [samples](samples/) directory for example implementations:
+
+- **[YAML PIP3A4 Sample](samples/yaml-pip3a4-sample/)** - Demonstrates YAML DSL routes for RosettaNet PIP3A4 Purchase Order processing
+
 ## Building
 
 To build the project:

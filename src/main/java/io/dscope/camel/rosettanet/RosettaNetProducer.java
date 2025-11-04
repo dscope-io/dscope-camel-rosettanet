@@ -21,10 +21,14 @@ import java.io.StringWriter;
 import java.util.Optional;
 import java.util.Properties;
 
+import javax.xml.namespace.QName;
+
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBElement;
 import jakarta.xml.bind.Marshaller;
 import jakarta.xml.bind.Unmarshaller;
+
+import jakarta.xml.bind.annotation.XmlRootElement;
 
 import org.apache.camel.AsyncCallback;
 import org.apache.camel.CamelContext;
@@ -110,6 +114,27 @@ public class RosettaNetProducer extends DefaultAsyncProducer {
 			LOG.debug("Marshalling RosettaNet message: {} - {}", msgDef.getType(), msgDef.getName());
 
 			Object document = exchange.getIn().getBody();
+
+			if (document == null) {
+				throw new IllegalArgumentException("Message body is null, cannot marshal");
+			}
+
+			Class <?> docClass = document.getClass();
+			LOG.debug("Marshalling document of type: {}", docClass.getName());
+
+			if (!docClass.isAnnotationPresent(XmlRootElement.class)) {
+				// Wrap in JAXBElement if no XmlRootElement annotation
+				Class<?> rootClass = Class.forName(msgDef.getPackageName() + "." + msgDef.getName());
+				XmlRootElement root = rootClass.getAnnotation(XmlRootElement.class);
+				if (root == null) {
+					throw new IllegalArgumentException("No @XmlRootElement found on class " + rootClass.getName());
+				}
+
+				QName qName = new QName(root.namespace(), root.name());
+				@SuppressWarnings("unchecked")
+				Class<Object> declaredType = (Class<Object>) docClass;
+				document = new JAXBElement<>(qName, declaredType, document);
+			}
 
 			// Create JAXB context from the properties file
 			Properties properties = RosettaNetDictionary.loadProperties(msgDef.getProperties());
