@@ -3,7 +3,9 @@ package io.dscope.tools.karavan;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import io.github.classgraph.*;
+import io.github.classgraph.ClassGraph;
+import io.github.classgraph.ScanResult;
+import io.github.classgraph.ClassInfo;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlElementRef;
 
@@ -85,14 +87,19 @@ public class RosettaNetKaravanModelGenerator {
         if (s.startsWith("java.util.List")) {
             int lt = s.indexOf('<'), gt = s.lastIndexOf('>');
             if (lt > 0 && gt > lt) {
-                return "List<" + simplify(s.substring(lt + 1, gt)) + ">";
+                return "List<" + simplifyString(s.substring(lt + 1, gt)) + ">";
             }
         }
         // JAXBElement
         if (s.startsWith("jakarta.xml.bind.JAXBElement")) {
             int lt = s.indexOf('<'), gt = s.lastIndexOf('>');
-            if (lt > 0 && gt > lt) return "JAXBElement<" + simplify(s.substring(lt + 1, gt)) + ">";
+            if (lt > 0 && gt > lt) return "JAXBElement<" + simplifyString(s.substring(lt + 1, gt)) + ">";
         }
+        int lastDot = s.lastIndexOf('.');
+        return lastDot > 0 ? s.substring(lastDot + 1) : s;
+    }
+
+    private static String simplifyString(String s) {
         int lastDot = s.lastIndexOf('.');
         return lastDot > 0 ? s.substring(lastDot + 1) : s;
     }
