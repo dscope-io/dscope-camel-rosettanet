@@ -1,0 +1,903 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns61:PurchaseOrderRequest xmlns="urn:rosettanet:specification:domain:Procurement:AccountClassification:xsd:codelist:01.03" xmlns:ns2="urn:rosettanet:specification:domain:Procurement:xsd:schema:02.25" xmlns:ns60="urn:rosettanet:specification:system:StandardDocumentHeader:xsd:schema:01.23" xmlns:ns4="urn:rosettanet:specification:universal:ContactInformation:xsd:schema:01.04" xmlns:ns3="urn:rosettanet:specification:domain:Procurement:CreditCardClassification:xsd:codelist:01.03" xmlns:ns6="urn:rosettanet:specification:universal:DataType:xsd:schema:01.04" xmlns:ns53="urn:rosettanet:specification:domain:Procurement:ConfirmationType:xsd:codelist:01.03" xmlns:ns5="urn:rosettanet:specification:universal:Locations:xsd:schema:01.04" xmlns:ns52="urn:rosettanet:specification:interchange:PurchaseOrderConfirmation:xsd:schema:02.05" xmlns:ns8="urn:rosettanet:specification:universal:Country:xsd:codelist:01.02" xmlns:ns51="urn:rosettanet:specification:domain:Procurement:xsd:schema:02.29" xmlns:ns7="urn:rosettanet:specification:universal:PartnerIdentification:xsd:schema:01.16" xmlns:ns50="urn:rosettanet:specification:domain:Procurement:TransportEvent:xsd:codelist:01.03" xmlns:ns13="urn:rosettanet:specification:universal:MonetaryExpression:xsd:schema:01.06" xmlns:ns57="urn:rosettanet:specification:domain:Procurement:PurchaseOrderStatus:xsd:codelist:01.06" xmlns:ns9="urn:rosettanet:specification:universal:CountrySubdivision:xsd:codelist:01.02" xmlns:ns12="urn:rosettanet:specification:domain:Procurement:BookPriceQualifier:xsd:codelist:01.04" xmlns:ns56="urn:rosettanet:specification:domain:Procurement:PurchaseOrderFillPriority:xsd:codelist:01.03" xmlns:ns11="urn:rosettanet:specification:domain:Shared:PaymentMethod:xsd:codelist:01.02" xmlns:ns55="urn:rosettanet:specification:domain:Procurement:PurchaseOrderAcknowledgmentReason:xsd:codelist:01.04" xmlns:ns10="urn:rosettanet:specification:universal:ProcessRoleIdentifier:xsd:codelist:01.11" xmlns:ns54="urn:rosettanet:specification:domain:Procurement:GovernmentPriorityRating:xsd:codelist:01.03" xmlns:ns17="urn:rosettanet:specification:universal:Dates:xsd:schema:01.03" xmlns:ns16="urn:rosettanet:specification:universal:ProductIdentification:xsd:schema:01.04" xmlns:ns15="urn:rosettanet:specification:domain:Procurement:CustomerType:xsd:codelist:01.03" xmlns:ns59="urn:rosettanet:specification:domain:Procurement:RequestOption:xsd:codelist:01.01" xmlns:ns14="urn:rosettanet:specification:universal:Currency:xsd:codelist:01.03" xmlns:ns58="urn:rosettanet:specification:domain:Procurement:PurchaseOrderType:xsd:codelist:01.05" xmlns:ns19="urn:rosettanet:specification:domain:Shared:AmountType:xsd:codelist:01.03" xmlns:ns18="urn:rosettanet:specification:domain:Shared:xsd:schema:01.17" xmlns:ns42="urn:rosettanet:specification:domain:Procurement:ForecastEvent:xsd:codelist:01.03" xmlns:ns41="urn:rosettanet:specification:domain:Procurement:SpecialHandling:xsd:codelist:01.04" xmlns:ns40="urn:rosettanet:specification:domain:Procurement:SpecialFulfillmentRequest:xsd:codelist:01.03" xmlns:ns46="urn:rosettanet:specification:domain:Procurement:SaleType:xsd:codelist:01.04" xmlns:ns45="urn:rosettanet:specification:domain:Procurement:TotalQualifier:xsd:codelist:01.03" xmlns:ns44="urn:rosettanet:specification:domain:Procurement:ProductSubstitutionReason:xsd:codelist:01.03" xmlns:ns43="urn:rosettanet:specification:universal:TaxType:xsd:codelist:01.02" xmlns:ns49="urn:rosettanet:specification:domain:Procurement:TaxExemptionCode:xsd:codelist:01.03" xmlns:ns48="urn:rosettanet:specification:domain:Procurement:TransactionType:xsd:codelist:01.04" xmlns:ns47="urn:rosettanet:specification:domain:Procurement:PurchaseMethod:xsd:codelist:01.03" xmlns:ns31="urn:rosettanet:specification:domain:Shared:Interval:xsd:codelist:01.01" xmlns:ns30="urn:rosettanet:specification:domain:Procurement:ForecastReferenceType:xsd:codelist:01.03" xmlns:ns35="urn:rosettanet:specification:domain:Procurement:Event:xsd:codelist:01.00" xmlns:ns34="urn:rosettanet:specification:domain:Procurement:DateType:xsd:codelist:01.00" xmlns:ns33="urn:rosettanet:specification:universal:UnitOfMeasure:xsd:codelist:01.04" xmlns:ns32="urn:rosettanet:specification:domain:Procurement:InventoryType:xsd:codelist:01.03" xmlns:ns39="urn:rosettanet:specification:domain:Shared:ShippingServiceLevel:xsd:codelist:01.01" xmlns:ns38="urn:rosettanet:specification:domain:Procurement:ShipmentTerms:xsd:codelist:01.03" xmlns:ns37="urn:rosettanet:specification:domain:Shared:FreeOnBoard:xsd:codelist:01.01" xmlns:ns36="urn:rosettanet:specification:domain:Procurement:LeadTimeClassificationCode:xsd:codelist:01.03" xmlns:ns20="urn:rosettanet:specification:domain:Shared:InvoiceChargeType:xsd:codelist:01.02" xmlns:ns64="urn:rosettanet:specification:universal:PartnerIdentification:xsd:schema:01.14" xmlns:ns63="urn:rosettanet:specification:universal:ProcessRoleIdentifier:xsd:codelist:01.10" xmlns:ns62="urn:rosettanet:specification:universal:ContactInformation:xsd:schema:01.03" xmlns:ns61="urn:rosettanet:specification:interchange:PurchaseOrderRequest:xsd:schema:02.05" xmlns:ns24="urn:rosettanet:specification:domain:Shared:WarrantyType:xsd:codelist:01.01" xmlns:ns68="urn:rosettanet:specification:universal:MimeTypeQualifier:xsd:codelist:01.02" xmlns:ns23="urn:rosettanet:specification:domain:Shared:RateType:xsd:codelist:01.01" xmlns:ns67="urn:rosettanet:specification:universal:Language:xsd:codelist:01.02" xmlns:ns22="urn:rosettanet:specification:domain:Shared:PricingTypeCode:xsd:codelist:01.04" xmlns:ns66="urn:rosettanet:specification:system:TPIRFileType:xsd:codelist:01.01" xmlns:ns21="urn:rosettanet:specification:domain:Shared:MonetaryAmountType:xsd:codelist:01.01" xmlns:ns65="urn:rosettanet:specification:domain:Procurement:Response:xsd:codelist:01.04" xmlns:ns28="urn:rosettanet:specification:universal:Document:xsd:schema:01.12" xmlns:ns27="urn:rosettanet:specification:domain:Procurement:PaymentCondition:xsd:codelist:01.03" xmlns:ns26="urn:rosettanet:specification:domain:Procurement:FinanceTerms:xsd:codelist:01.03" xmlns:ns25="urn:rosettanet:specification:domain:Shared:PaymentType:xsd:codelist:01.01" xmlns:ns69="urn:rosettanet:specification:universal:UnitOfMeasure:xsd:codelist:01.05" xmlns:ns29="urn:rosettanet:specification:universal:DocumentType:xsd:codelist:01.13">
+    <ns60:DocumentHeader>
+        <ns60:CorrelationInformation>
+            <ns60:ContractInformation>
+                <ns60:ContractIdentifier>String</ns60:ContractIdentifier>
+                <ns60:ContractType>String</ns60:ContractType>
+            </ns60:ContractInformation>
+            <ns60:RequestingDocumentInformation>
+                <ns60:BusinessProcessInstanceIdentifier>String</ns60:BusinessProcessInstanceIdentifier>
+                <ns60:RequestingDocumentCreationDateTime>2005-02-15T08:30:00+08:00</ns60:RequestingDocumentCreationDateTime>
+                <ns60:RequestingDocumentInstanceIdentifier>String</ns60:RequestingDocumentInstanceIdentifier>
+                <ns60:ResponseDateTime>2005-02-15T08:30:00+08:00</ns60:ResponseDateTime>
+            </ns60:RequestingDocumentInformation>
+        </ns60:CorrelationInformation>
+        <ns60:DocumentInformation>
+            <ns60:Creation>2005-02-15T08:30:00+08:00</ns60:Creation>
+            <ns60:DocumentIdentification>
+                <ns60:Identifier>String</ns60:Identifier>
+                <ns60:Type>String</ns60:Type>
+                <ns60:StandardDocumentIdentification>
+                    <ns60:Standard>String</ns60:Standard>
+                    <ns60:Version>String</ns60:Version>
+                </ns60:StandardDocumentIdentification>
+            </ns60:DocumentIdentification>
+            <ns60:DocumentManifest>
+                <ns60:ManifestItem>
+                    <ns60:Description>String</ns60:Description>
+                    <ns60:Language identifier="Language" codeListVersion="01.01" agency="RosettaNet">EN</ns60:Language>
+                    <ns60:Length>100</ns60:Length>
+                    <ns60:MimeTypeQualifier identifier="MimeTypeQualifier" codeListVersion="01.01" agency="RosettaNet">application/activemessage</ns60:MimeTypeQualifier>
+                    <ns60:UniversalResourceIdentifier>String</ns60:UniversalResourceIdentifier>
+                </ns60:ManifestItem>
+                <ns60:MultipleType>true</ns60:MultipleType>
+                <ns60:NumberOfItems>100</ns60:NumberOfItems>
+            </ns60:DocumentManifest>
+            <ns60:DocumentSecurity>
+                <ns60:NonRepudiableReceipt>true</ns60:NonRepudiableReceipt>
+                <ns60:PersistentEncryption>true</ns60:PersistentEncryption>
+                <ns60:PersistentSignature>true</ns60:PersistentSignature>
+            </ns60:DocumentSecurity>
+        </ns60:DocumentInformation>
+        <ns60:HeaderVersion>String</ns60:HeaderVersion>
+        <ns60:Receiver>
+            <ns60:BusinessServiceInformation>
+                <ns60:ActionName>String</ns60:ActionName>
+                <ns60:ProcessIdentifier>String</ns60:ProcessIdentifier>
+                <ns60:ProcessReference>String</ns60:ProcessReference>
+                <ns60:ProcessState>String</ns60:ProcessState>
+                <ns60:ServiceName>String</ns60:ServiceName>
+            </ns60:BusinessServiceInformation>
+            <ns4:ContactInformation>
+                <ns4:Contact>String</ns4:Contact>
+                <ns4:Email>String</ns4:Email>
+                <ns4:Fax>String</ns4:Fax>
+                <ns4:Identifier>String</ns4:Identifier>
+                <ns4:IdentifierCode>String</ns4:IdentifierCode>
+                <ns4:Phone>String</ns4:Phone>
+            </ns4:ContactInformation>
+            <ns7:PartnerIdentification>
+                <ns7:PartnerName>String</ns7:PartnerName>
+                <ns5:AlternativeIdentifier>
+                    <ns5:Authority>String</ns5:Authority>
+                    <ns5:Identifier>String</ns5:Identifier>
+                </ns5:AlternativeIdentifier>
+            </ns7:PartnerIdentification>
+        </ns60:Receiver>
+        <ns60:Sender>
+            <ns60:BusinessServiceInformation>
+                <ns60:ActionName>String</ns60:ActionName>
+                <ns60:ProcessIdentifier>String</ns60:ProcessIdentifier>
+                <ns60:ProcessReference>String</ns60:ProcessReference>
+                <ns60:ProcessState>String</ns60:ProcessState>
+                <ns60:ServiceName>String</ns60:ServiceName>
+            </ns60:BusinessServiceInformation>
+            <ns4:ContactInformation>
+                <ns4:Contact>String</ns4:Contact>
+                <ns4:Email>String</ns4:Email>
+                <ns4:Fax>String</ns4:Fax>
+                <ns4:Identifier>String</ns4:Identifier>
+                <ns4:IdentifierCode>String</ns4:IdentifierCode>
+                <ns4:Phone>String</ns4:Phone>
+            </ns4:ContactInformation>
+            <ns7:PartnerIdentification>
+                <ns7:PartnerName>String</ns7:PartnerName>
+                <ns5:AlternativeIdentifier>
+                    <ns5:Authority>String</ns5:Authority>
+                    <ns5:Identifier>String</ns5:Identifier>
+                </ns5:AlternativeIdentifier>
+            </ns7:PartnerIdentification>
+        </ns60:Sender>
+    </ns60:DocumentHeader>
+    <ns61:PurchaseOrder>
+        <ns51:AccountDescription>
+            <AccountClassification identifier="AccountClassification" codeListVersion="01.01" agency="RosettaNet">CHK</AccountClassification>
+            <ns51:AccountName>String</ns51:AccountName>
+            <ns51:AccountNumber>String</ns51:AccountNumber>
+            <ns51:CreditCard>
+                <ns51:CardHolderName>String</ns51:CardHolderName>
+                <ns51:CidIdentifier>String</ns51:CidIdentifier>
+                <ns3:CreditCardClassification identifier="CreditCardClassification" codeListVersion="01.01" agency="RosettaNet">AMX</ns3:CreditCardClassification>
+                <ns51:ExpiryDate>2002-02-15</ns51:ExpiryDate>
+                <ns51:Identifier>String</ns51:Identifier>
+            </ns51:CreditCard>
+            <ns7:PartnerDescription>
+                <ns7:FullPartner>
+                    <ns4:ContactInformation>
+                        <ns4:Contact>String</ns4:Contact>
+                        <ns4:Email>String</ns4:Email>
+                        <ns4:Fax>String</ns4:Fax>
+                        <ns4:Identifier>String</ns4:Identifier>
+                        <ns4:IdentifierCode>String</ns4:IdentifierCode>
+                        <ns4:Phone>String</ns4:Phone>
+                    </ns4:ContactInformation>
+                    <ns5:Location>
+                        <ns5:AlternativeIdentifier>
+                            <ns5:Authority>String</ns5:Authority>
+                            <ns5:Identifier>String</ns5:Identifier>
+                        </ns5:AlternativeIdentifier>
+                    </ns5:Location>
+                    <ns7:PartnerIdentification>
+                        <ns7:PartnerName>String</ns7:PartnerName>
+                        <ns5:AlternativeIdentifier>
+                            <ns5:Authority>String</ns5:Authority>
+                            <ns5:Identifier>String</ns5:Identifier>
+                        </ns5:AlternativeIdentifier>
+                    </ns7:PartnerIdentification>
+                    <ns5:PhysicalAddress>
+                        <ns5:AddressLine1>String</ns5:AddressLine1>
+                        <ns5:AddressLine2>String</ns5:AddressLine2>
+                        <ns5:AddressLine3>String</ns5:AddressLine3>
+                        <ns5:AddressLine4>String</ns5:AddressLine4>
+                        <ns5:AddressLine5>String</ns5:AddressLine5>
+                        <ns5:CityName>String</ns5:CityName>
+                        <ns8:Country identifier="Country" codeListVersion="01.01" agency="RosettaNet">MG</ns8:Country>
+                        <ns9:CountrySubdivision identifier="CountrySubdivision" codeListVersion="01.01" agency="RosettaNet">MG-T</ns9:CountrySubdivision>
+                        <ns5:PostalCode>String</ns5:PostalCode>
+                        <ns5:PostOfficeBox>String</ns5:PostOfficeBox>
+                    </ns5:PhysicalAddress>
+                    <ns10:ProcessRoleIdentifier identifier="ProcessRoleIdentifier" codeListVersion="01.10" agency="RosettaNet">ADM</ns10:ProcessRoleIdentifier>
+                </ns7:FullPartner>
+            </ns7:PartnerDescription>
+            <ns11:PaymentMethod identifier="PaymentMethod" codeListVersion="01.01" agency="RosettaNet">ACH</ns11:PaymentMethod>
+            <ns51:PrePaymentCheckNumber>String</ns51:PrePaymentCheckNumber>
+            <ns51:WireTransferIdentifier>String</ns51:WireTransferIdentifier>
+        </ns51:AccountDescription>
+        <ns51:AncillaryDocument>
+            <ns51:Name>String</ns51:Name>
+            <ns51:Version>String</ns51:Version>
+        </ns51:AncillaryDocument>
+        <ns61:BuildingSecurityAccessCode>String</ns61:BuildingSecurityAccessCode>
+        <ns28:BusinessDocumentReference>
+            <ns28:DateTime>2005-02-15T08:30:00+08:00</ns28:DateTime>
+            <ns29:DocumentType identifier="DocumentType" codeListVersion="01.12" agency="RosettaNet">APM</ns29:DocumentType>
+            <ns28:Identifier>String</ns28:Identifier>
+            <ns28:Line>String</ns28:Line>
+            <ns28:Revision>String</ns28:Revision>
+            <ns28:SubLine>String</ns28:SubLine>
+        </ns28:BusinessDocumentReference>
+        <ns61:Comments>String</ns61:Comments>
+        <ns51:ContractInformation>
+            <ns51:Identifier>String</ns51:Identifier>
+            <ns51:Notes>String</ns51:Notes>
+        </ns51:ContractInformation>
+        <ns51:FinancingTerms>
+            <ns26:FinanceTerms identifier="FinanceTerms" codeListVersion="01.01" agency="RosettaNet">BDO</ns26:FinanceTerms>
+            <ns51:PaymentTerms>
+                <ns51:Discounts>
+                    <ns51:Day>99</ns51:Day>
+                    <ns51:Days>99</ns51:Days>
+                    <ns51:Percent>999999</ns51:Percent>
+                </ns51:Discounts>
+                <ns51:NetTerms>
+                    <ns51:Day>---31</ns51:Day>
+                    <ns51:Days>100</ns51:Days>
+                </ns51:NetTerms>
+                <ns27:PaymentCondition identifier="PaymentCondition" codeListVersion="01.01" agency="RosettaNet">ACC</ns27:PaymentCondition>
+                <ns51:PercentDue>999999</ns51:PercentDue>
+            </ns51:PaymentTerms>
+        </ns51:FinancingTerms>
+        <ns61:GovernmentContractIdentifier>
+            <ns28:DateTime>2005-02-15T08:30:00+08:00</ns28:DateTime>
+            <ns29:DocumentType identifier="DocumentType" codeListVersion="01.12" agency="RosettaNet">APM</ns29:DocumentType>
+            <ns28:Identifier>String</ns28:Identifier>
+            <ns28:Line>String</ns28:Line>
+            <ns28:Revision>String</ns28:Revision>
+            <ns28:SubLine>String</ns28:SubLine>
+        </ns61:GovernmentContractIdentifier>
+        <ns54:GovernmentPriorityRating identifier="GovernmentPriorityRating" codeListVersion="01.01" agency="RosettaNet">ATE</ns54:GovernmentPriorityRating>
+        <ns61:Information>String</ns61:Information>
+        <ns61:IsDropShip>true</ns61:IsDropShip>
+        <ns61:IsRequiredToRespondAtDetailLevel>true</ns61:IsRequiredToRespondAtDetailLevel>
+        <ns61:ListPrice>
+            <ns18:MonetaryAmount>
+                <ns19:AmountType identifier="AmountType" codeListVersion="01.02" agency="RosettaNet">DIP</ns19:AmountType>
+                <ns13:FinancialAmount>
+                    <ns13:Amount>3.14159</ns13:Amount>
+                    <ns14:Currency identifier="Currency" codeListVersion="01.01" agency="RosettaNet">USD</ns14:Currency>
+                    <ns13:Identifier>String</ns13:Identifier>
+                </ns13:FinancialAmount>
+                <ns20:InvoiceChargeType identifier="InvoiceChargeType" codeListVersion="01.01" agency="RosettaNet">ALC</ns20:InvoiceChargeType>
+                <ns21:MonetaryAmountType identifier="MonetaryAmountType" codeListVersion="01.00" agency="RosettaNet">CRE</ns21:MonetaryAmountType>
+            </ns18:MonetaryAmount>
+            <ns22:PricingTypeCode identifier="PricingTypeCode" codeListVersion="01.03" agency="RosettaNet">ACR</ns22:PricingTypeCode>
+        </ns61:ListPrice>
+        <ns5:Location>
+            <ns5:AlternativeIdentifier>
+                <ns5:Authority>String</ns5:Authority>
+                <ns5:Identifier>String</ns5:Identifier>
+            </ns5:AlternativeIdentifier>
+        </ns5:Location>
+        <ns51:MapReference>
+            <ns5:AddressLine1>String</ns5:AddressLine1>
+            <ns5:AddressLine2>String</ns5:AddressLine2>
+            <ns5:AddressLine3>String</ns5:AddressLine3>
+            <ns5:AddressLine4>String</ns5:AddressLine4>
+            <ns5:AddressLine5>String</ns5:AddressLine5>
+            <ns5:CityName>String</ns5:CityName>
+            <ns8:Country identifier="Country" codeListVersion="01.01" agency="RosettaNet">MG</ns8:Country>
+            <ns9:CountrySubdivision identifier="CountrySubdivision" codeListVersion="01.01" agency="RosettaNet">MG-T</ns9:CountrySubdivision>
+            <ns5:PostalCode>String</ns5:PostalCode>
+            <ns5:PostOfficeBox>String</ns5:PostOfficeBox>
+            <ns51:Description>String</ns51:Description>
+            <ns51:Identifier>String</ns51:Identifier>
+            <ns51:Reference1>String</ns51:Reference1>
+            <ns51:Reference2>String</ns51:Reference2>
+        </ns51:MapReference>
+        <ns51:MilestoneDate>
+            <ns34:DateType identifier="DateType" codeListVersion="01.00" agency="RosettaNet">ACT</ns34:DateType>
+            <ns51:EventDate>2002-02-15</ns51:EventDate>
+            <ns51:AlternativeEvent>String</ns51:AlternativeEvent>
+        </ns51:MilestoneDate>
+        <ns61:OrderLineItem>
+            <ns61:ProductLineItem>
+                <ns51:AncillaryDocument>
+                    <ns51:Name>String</ns51:Name>
+                    <ns51:Version>String</ns51:Version>
+                </ns51:AncillaryDocument>
+                <ns28:BusinessDocumentReference>
+                    <ns28:DateTime>2005-02-15T08:30:00+08:00</ns28:DateTime>
+                    <ns29:DocumentType identifier="DocumentType" codeListVersion="01.12" agency="RosettaNet">APM</ns29:DocumentType>
+                    <ns28:Identifier>String</ns28:Identifier>
+                    <ns28:Line>String</ns28:Line>
+                    <ns28:Revision>String</ns28:Revision>
+                    <ns28:SubLine>String</ns28:SubLine>
+                </ns28:BusinessDocumentReference>
+                <ns61:Comments>String</ns61:Comments>
+                <ns51:ContractInformation>
+                    <ns51:Identifier>String</ns51:Identifier>
+                    <ns51:Notes>String</ns51:Notes>
+                </ns51:ContractInformation>
+                <ns61:CountryOfOrigin identifier="Country" codeListVersion="01.01" agency="RosettaNet">MG</ns61:CountryOfOrigin>
+                <ns51:CustomerInformation>
+                    <ns15:CustomerType identifier="CustomerType" codeListVersion="01.01" agency="RosettaNet">ENC</ns15:CustomerType>
+                    <ns7:PartnerDescription>
+                        <ns7:FullPartner>
+                            <ns4:ContactInformation>
+                                <ns4:Contact>String</ns4:Contact>
+                                <ns4:Email>String</ns4:Email>
+                                <ns4:Fax>String</ns4:Fax>
+                                <ns4:Identifier>String</ns4:Identifier>
+                                <ns4:IdentifierCode>String</ns4:IdentifierCode>
+                                <ns4:Phone>String</ns4:Phone>
+                            </ns4:ContactInformation>
+                            <ns5:Location>
+                                <ns5:AlternativeIdentifier>
+                                    <ns5:Authority>String</ns5:Authority>
+                                    <ns5:Identifier>String</ns5:Identifier>
+                                </ns5:AlternativeIdentifier>
+                            </ns5:Location>
+                            <ns7:PartnerIdentification>
+                                <ns7:PartnerName>String</ns7:PartnerName>
+                                <ns5:AlternativeIdentifier>
+                                    <ns5:Authority>String</ns5:Authority>
+                                    <ns5:Identifier>String</ns5:Identifier>
+                                </ns5:AlternativeIdentifier>
+                            </ns7:PartnerIdentification>
+                            <ns5:PhysicalAddress>
+                                <ns5:AddressLine1>String</ns5:AddressLine1>
+                                <ns5:AddressLine2>String</ns5:AddressLine2>
+                                <ns5:AddressLine3>String</ns5:AddressLine3>
+                                <ns5:AddressLine4>String</ns5:AddressLine4>
+                                <ns5:AddressLine5>String</ns5:AddressLine5>
+                                <ns5:CityName>String</ns5:CityName>
+                                <ns8:Country identifier="Country" codeListVersion="01.01" agency="RosettaNet">MG</ns8:Country>
+                                <ns9:CountrySubdivision identifier="CountrySubdivision" codeListVersion="01.01" agency="RosettaNet">MG-T</ns9:CountrySubdivision>
+                                <ns5:PostalCode>String</ns5:PostalCode>
+                                <ns5:PostOfficeBox>String</ns5:PostOfficeBox>
+                            </ns5:PhysicalAddress>
+                            <ns10:ProcessRoleIdentifier identifier="ProcessRoleIdentifier" codeListVersion="01.10" agency="RosettaNet">ADM</ns10:ProcessRoleIdentifier>
+                        </ns7:FullPartner>
+                    </ns7:PartnerDescription>
+                    <ns51:ProjectIdentifier>String</ns51:ProjectIdentifier>
+                </ns51:CustomerInformation>
+                <ns61:ExpediteReferenceIdentifier>String</ns61:ExpediteReferenceIdentifier>
+                <ns61:Information>String</ns61:Information>
+                <ns61:InstallAtPartnerLine>
+                    <ns4:ContactInformation>
+                        <ns4:Contact>String</ns4:Contact>
+                        <ns4:Email>String</ns4:Email>
+                        <ns4:Fax>String</ns4:Fax>
+                        <ns4:Identifier>String</ns4:Identifier>
+                        <ns4:IdentifierCode>String</ns4:IdentifierCode>
+                        <ns4:Phone>String</ns4:Phone>
+                    </ns4:ContactInformation>
+                    <ns5:Location>
+                        <ns5:AlternativeIdentifier>
+                            <ns5:Authority>String</ns5:Authority>
+                            <ns5:Identifier>String</ns5:Identifier>
+                        </ns5:AlternativeIdentifier>
+                    </ns5:Location>
+                    <ns7:PartnerIdentification>
+                        <ns7:PartnerName>String</ns7:PartnerName>
+                        <ns5:AlternativeIdentifier>
+                            <ns5:Authority>String</ns5:Authority>
+                            <ns5:Identifier>String</ns5:Identifier>
+                        </ns5:AlternativeIdentifier>
+                    </ns7:PartnerIdentification>
+                    <ns5:PhysicalAddress>
+                        <ns5:AddressLine1>String</ns5:AddressLine1>
+                        <ns5:AddressLine2>String</ns5:AddressLine2>
+                        <ns5:AddressLine3>String</ns5:AddressLine3>
+                        <ns5:AddressLine4>String</ns5:AddressLine4>
+                        <ns5:AddressLine5>String</ns5:AddressLine5>
+                        <ns5:CityName>String</ns5:CityName>
+                        <ns8:Country identifier="Country" codeListVersion="01.01" agency="RosettaNet">MG</ns8:Country>
+                        <ns9:CountrySubdivision identifier="CountrySubdivision" codeListVersion="01.01" agency="RosettaNet">MG-T</ns9:CountrySubdivision>
+                        <ns5:PostalCode>String</ns5:PostalCode>
+                        <ns5:PostOfficeBox>String</ns5:PostOfficeBox>
+                    </ns5:PhysicalAddress>
+                </ns61:InstallAtPartnerLine>
+                <ns61:IsDropShip>true</ns61:IsDropShip>
+                <ns61:IsRequiredToRespondAtDetailLevel>true</ns61:IsRequiredToRespondAtDetailLevel>
+                <ns61:LineNumber>String</ns61:LineNumber>
+                <ns61:ListPrice>
+                    <ns18:MonetaryAmount>
+                        <ns19:AmountType identifier="AmountType" codeListVersion="01.02" agency="RosettaNet">DIP</ns19:AmountType>
+                        <ns13:FinancialAmount>
+                            <ns13:Amount>3.14159</ns13:Amount>
+                            <ns14:Currency identifier="Currency" codeListVersion="01.01" agency="RosettaNet">USD</ns14:Currency>
+                            <ns13:Identifier>String</ns13:Identifier>
+                        </ns13:FinancialAmount>
+                        <ns20:InvoiceChargeType identifier="InvoiceChargeType" codeListVersion="01.01" agency="RosettaNet">ALC</ns20:InvoiceChargeType>
+                        <ns21:MonetaryAmountType identifier="MonetaryAmountType" codeListVersion="01.00" agency="RosettaNet">CRE</ns21:MonetaryAmountType>
+                    </ns18:MonetaryAmount>
+                    <ns22:PricingTypeCode identifier="PricingTypeCode" codeListVersion="01.03" agency="RosettaNet">ACR</ns22:PricingTypeCode>
+                </ns61:ListPrice>
+                <ns51:MapReference>
+                    <ns5:AddressLine1>String</ns5:AddressLine1>
+                    <ns5:AddressLine2>String</ns5:AddressLine2>
+                    <ns5:AddressLine3>String</ns5:AddressLine3>
+                    <ns5:AddressLine4>String</ns5:AddressLine4>
+                    <ns5:AddressLine5>String</ns5:AddressLine5>
+                    <ns5:CityName>String</ns5:CityName>
+                    <ns8:Country identifier="Country" codeListVersion="01.01" agency="RosettaNet">MG</ns8:Country>
+                    <ns9:CountrySubdivision identifier="CountrySubdivision" codeListVersion="01.01" agency="RosettaNet">MG-T</ns9:CountrySubdivision>
+                    <ns5:PostalCode>String</ns5:PostalCode>
+                    <ns5:PostOfficeBox>String</ns5:PostOfficeBox>
+                    <ns51:Description>String</ns51:Description>
+                    <ns51:Identifier>String</ns51:Identifier>
+                    <ns51:Reference1>String</ns51:Reference1>
+                    <ns51:Reference2>String</ns51:Reference2>
+                </ns51:MapReference>
+                <ns51:MilestoneDate>
+                    <ns34:DateType identifier="DateType" codeListVersion="01.00" agency="RosettaNet">ACT</ns34:DateType>
+                    <ns51:EventDate>2002-02-15</ns51:EventDate>
+                    <ns51:AlternativeEvent>String</ns51:AlternativeEvent>
+                </ns51:MilestoneDate>
+                <ns51:OrderQuantity>
+                    <ns51:RemainingQuantity>3.14159</ns51:RemainingQuantity>
+                    <ns51:RequestedQuantity>3.14159</ns51:RequestedQuantity>
+                    <ns51:ScheduledShipQuantity>3.14159</ns51:ScheduledShipQuantity>
+                    <ns51:TotalReceivedQuantity>3.14159</ns51:TotalReceivedQuantity>
+                </ns51:OrderQuantity>
+                <ns51:OrderShippingInformation>
+                    <ns18:CarrierInformation>
+                        <ns18:Identifier>String</ns18:Identifier>
+                        <ns18:SCAC>Str</ns18:SCAC>
+                    </ns18:CarrierInformation>
+                    <ns37:FreeOnBoard identifier="FreeOnBoard" codeListVersion="01.00" agency="RosettaNet">DES</ns37:FreeOnBoard>
+                    <ns51:PackList>String</ns51:PackList>
+                    <ns38:ShipmentTerms identifier="ShipmentTerms" codeListVersion="01.01" agency="RosettaNet">ADC</ns38:ShipmentTerms>
+                    <ns39:ShippingServiceLevel identifier="ShippingServiceLevel" codeListVersion="01.00" agency="RosettaNet">1BD</ns39:ShippingServiceLevel>
+                    <ns40:SpecialFulfillmentRequest identifier="SpecialFulfillmentRequest" codeListVersion="01.01" agency="RosettaNet">AQM</ns40:SpecialFulfillmentRequest>
+                    <ns51:SpecialHandlingInstruction>
+                        <ns41:SpecialHandling identifier="SpecialHandling" codeListVersion="01.04" agency="RosettaNet">15M</ns41:SpecialHandling>
+                        <ns51:Text>String</ns51:Text>
+                    </ns51:SpecialHandlingInstruction>
+                </ns51:OrderShippingInformation>
+                <ns7:PartnerDescription>
+                    <ns7:FullPartner>
+                        <ns4:ContactInformation>
+                            <ns4:Contact>String</ns4:Contact>
+                            <ns4:Email>String</ns4:Email>
+                            <ns4:Fax>String</ns4:Fax>
+                            <ns4:Identifier>String</ns4:Identifier>
+                            <ns4:IdentifierCode>String</ns4:IdentifierCode>
+                            <ns4:Phone>String</ns4:Phone>
+                        </ns4:ContactInformation>
+                        <ns5:Location>
+                            <ns5:AlternativeIdentifier>
+                                <ns5:Authority>String</ns5:Authority>
+                                <ns5:Identifier>String</ns5:Identifier>
+                            </ns5:AlternativeIdentifier>
+                        </ns5:Location>
+                        <ns7:PartnerIdentification>
+                            <ns7:PartnerName>String</ns7:PartnerName>
+                            <ns5:AlternativeIdentifier>
+                                <ns5:Authority>String</ns5:Authority>
+                                <ns5:Identifier>String</ns5:Identifier>
+                            </ns5:AlternativeIdentifier>
+                        </ns7:PartnerIdentification>
+                        <ns5:PhysicalAddress>
+                            <ns5:AddressLine1>String</ns5:AddressLine1>
+                            <ns5:AddressLine2>String</ns5:AddressLine2>
+                            <ns5:AddressLine3>String</ns5:AddressLine3>
+                            <ns5:AddressLine4>String</ns5:AddressLine4>
+                            <ns5:AddressLine5>String</ns5:AddressLine5>
+                            <ns5:CityName>String</ns5:CityName>
+                            <ns8:Country identifier="Country" codeListVersion="01.01" agency="RosettaNet">MG</ns8:Country>
+                            <ns9:CountrySubdivision identifier="CountrySubdivision" codeListVersion="01.01" agency="RosettaNet">MG-T</ns9:CountrySubdivision>
+                            <ns5:PostalCode>String</ns5:PostalCode>
+                            <ns5:PostOfficeBox>String</ns5:PostOfficeBox>
+                        </ns5:PhysicalAddress>
+                        <ns10:ProcessRoleIdentifier identifier="ProcessRoleIdentifier" codeListVersion="01.10" agency="RosettaNet">ADM</ns10:ProcessRoleIdentifier>
+                    </ns7:FullPartner>
+                </ns7:PartnerDescription>
+                <ns51:PortalAccess>
+                    <ns51:AuthorizationCode>String</ns51:AuthorizationCode>
+                    <ns51:Url>String</ns51:Url>
+                </ns51:PortalAccess>
+                <ns16:ProductIdentification>
+                    <ns16:ProductName>String</ns16:ProductName>
+                    <ns16:Revision>String</ns16:Revision>
+                    <ns5:AlternativeIdentifier>
+                        <ns5:Authority>String</ns5:Authority>
+                        <ns5:Identifier>String</ns5:Identifier>
+                    </ns5:AlternativeIdentifier>
+                </ns16:ProductIdentification>
+                <ns61:ProductSubLineItem>
+                    <ns51:AncillaryDocument>
+                        <ns51:Name>String</ns51:Name>
+                        <ns51:Version>String</ns51:Version>
+                    </ns51:AncillaryDocument>
+                    <ns61:Comments>String</ns61:Comments>
+                    <ns51:ContractInformation>
+                        <ns51:Identifier>String</ns51:Identifier>
+                        <ns51:Notes>String</ns51:Notes>
+                    </ns51:ContractInformation>
+                    <ns61:CountryOfOrigin identifier="Country" codeListVersion="01.01" agency="RosettaNet">MG</ns61:CountryOfOrigin>
+                    <ns51:CustomerInformation>
+                        <ns15:CustomerType identifier="CustomerType" codeListVersion="01.01" agency="RosettaNet">ENC</ns15:CustomerType>
+                        <ns7:PartnerDescription>
+                            <ns7:FullPartner>
+                                <ns4:ContactInformation>
+                                    <ns4:Contact>String</ns4:Contact>
+                                    <ns4:Email>String</ns4:Email>
+                                    <ns4:Fax>String</ns4:Fax>
+                                    <ns4:Identifier>String</ns4:Identifier>
+                                    <ns4:IdentifierCode>String</ns4:IdentifierCode>
+                                    <ns4:Phone>String</ns4:Phone>
+                                </ns4:ContactInformation>
+                                <ns5:Location>
+                                    <ns5:AlternativeIdentifier>
+                                        <ns5:Authority>String</ns5:Authority>
+                                        <ns5:Identifier>String</ns5:Identifier>
+                                    </ns5:AlternativeIdentifier>
+                                </ns5:Location>
+                                <ns7:PartnerIdentification>
+                                    <ns7:PartnerName>String</ns7:PartnerName>
+                                    <ns5:AlternativeIdentifier>
+                                        <ns5:Authority>String</ns5:Authority>
+                                        <ns5:Identifier>String</ns5:Identifier>
+                                    </ns5:AlternativeIdentifier>
+                                </ns7:PartnerIdentification>
+                                <ns5:PhysicalAddress>
+                                    <ns5:AddressLine1>String</ns5:AddressLine1>
+                                    <ns5:AddressLine2>String</ns5:AddressLine2>
+                                    <ns5:AddressLine3>String</ns5:AddressLine3>
+                                    <ns5:AddressLine4>String</ns5:AddressLine4>
+                                    <ns5:AddressLine5>String</ns5:AddressLine5>
+                                    <ns5:CityName>String</ns5:CityName>
+                                    <ns8:Country identifier="Country" codeListVersion="01.01" agency="RosettaNet">MG</ns8:Country>
+                                    <ns9:CountrySubdivision identifier="CountrySubdivision" codeListVersion="01.01" agency="RosettaNet">MG-T</ns9:CountrySubdivision>
+                                    <ns5:PostalCode>String</ns5:PostalCode>
+                                    <ns5:PostOfficeBox>String</ns5:PostOfficeBox>
+                                </ns5:PhysicalAddress>
+                                <ns10:ProcessRoleIdentifier identifier="ProcessRoleIdentifier" codeListVersion="01.10" agency="RosettaNet">ADM</ns10:ProcessRoleIdentifier>
+                            </ns7:FullPartner>
+                        </ns7:PartnerDescription>
+                        <ns51:ProjectIdentifier>String</ns51:ProjectIdentifier>
+                    </ns51:CustomerInformation>
+                    <ns61:ExpediteReferenceIdentifier>String</ns61:ExpediteReferenceIdentifier>
+                    <ns61:Information>String</ns61:Information>
+                    <ns61:InstallAtSubLine>
+                        <ns4:ContactInformation>
+                            <ns4:Contact>String</ns4:Contact>
+                            <ns4:Email>String</ns4:Email>
+                            <ns4:Fax>String</ns4:Fax>
+                            <ns4:Identifier>String</ns4:Identifier>
+                            <ns4:IdentifierCode>String</ns4:IdentifierCode>
+                            <ns4:Phone>String</ns4:Phone>
+                        </ns4:ContactInformation>
+                        <ns7:SpecifiedKnownPartner>
+                            <ns7:PartnerIdentification>
+                                <ns7:PartnerName>String</ns7:PartnerName>
+                                <ns5:AlternativeIdentifier>
+                                    <ns5:Authority>String</ns5:Authority>
+                                    <ns5:Identifier>String</ns5:Identifier>
+                                </ns5:AlternativeIdentifier>
+                            </ns7:PartnerIdentification>
+                        </ns7:SpecifiedKnownPartner>
+                    </ns61:InstallAtSubLine>
+                    <ns61:IsDropShip>true</ns61:IsDropShip>
+                    <ns51:MapReference>
+                        <ns5:AddressLine1>String</ns5:AddressLine1>
+                        <ns5:AddressLine2>String</ns5:AddressLine2>
+                        <ns5:AddressLine3>String</ns5:AddressLine3>
+                        <ns5:AddressLine4>String</ns5:AddressLine4>
+                        <ns5:AddressLine5>String</ns5:AddressLine5>
+                        <ns5:CityName>String</ns5:CityName>
+                        <ns8:Country identifier="Country" codeListVersion="01.01" agency="RosettaNet">MG</ns8:Country>
+                        <ns9:CountrySubdivision identifier="CountrySubdivision" codeListVersion="01.01" agency="RosettaNet">MG-T</ns9:CountrySubdivision>
+                        <ns5:PostalCode>String</ns5:PostalCode>
+                        <ns5:PostOfficeBox>String</ns5:PostOfficeBox>
+                        <ns51:Description>String</ns51:Description>
+                        <ns51:Identifier>String</ns51:Identifier>
+                        <ns51:Reference1>String</ns51:Reference1>
+                        <ns51:Reference2>String</ns51:Reference2>
+                    </ns51:MapReference>
+                    <ns51:MilestoneDate>
+                        <ns34:DateType identifier="DateType" codeListVersion="01.00" agency="RosettaNet">ACT</ns34:DateType>
+                        <ns51:EventDate>2002-02-15</ns51:EventDate>
+                        <ns51:AlternativeEvent>String</ns51:AlternativeEvent>
+                    </ns51:MilestoneDate>
+                    <ns51:OrderQuantity>
+                        <ns51:RemainingQuantity>3.14159</ns51:RemainingQuantity>
+                        <ns51:RequestedQuantity>3.14159</ns51:RequestedQuantity>
+                        <ns51:ScheduledShipQuantity>3.14159</ns51:ScheduledShipQuantity>
+                        <ns51:TotalReceivedQuantity>3.14159</ns51:TotalReceivedQuantity>
+                    </ns51:OrderQuantity>
+                    <ns51:OrderShippingInformation>
+                        <ns18:CarrierInformation>
+                            <ns18:Identifier>String</ns18:Identifier>
+                            <ns18:SCAC>Str</ns18:SCAC>
+                        </ns18:CarrierInformation>
+                        <ns37:FreeOnBoard identifier="FreeOnBoard" codeListVersion="01.00" agency="RosettaNet">DES</ns37:FreeOnBoard>
+                        <ns51:PackList>String</ns51:PackList>
+                        <ns38:ShipmentTerms identifier="ShipmentTerms" codeListVersion="01.01" agency="RosettaNet">ADC</ns38:ShipmentTerms>
+                        <ns39:ShippingServiceLevel identifier="ShippingServiceLevel" codeListVersion="01.00" agency="RosettaNet">1BD</ns39:ShippingServiceLevel>
+                        <ns40:SpecialFulfillmentRequest identifier="SpecialFulfillmentRequest" codeListVersion="01.01" agency="RosettaNet">AQM</ns40:SpecialFulfillmentRequest>
+                        <ns51:SpecialHandlingInstruction>
+                            <ns41:SpecialHandling identifier="SpecialHandling" codeListVersion="01.04" agency="RosettaNet">15M</ns41:SpecialHandling>
+                            <ns51:Text>String</ns51:Text>
+                        </ns51:SpecialHandlingInstruction>
+                    </ns51:OrderShippingInformation>
+                    <ns7:PartnerDescription>
+                        <ns7:FullPartner>
+                            <ns4:ContactInformation>
+                                <ns4:Contact>String</ns4:Contact>
+                                <ns4:Email>String</ns4:Email>
+                                <ns4:Fax>String</ns4:Fax>
+                                <ns4:Identifier>String</ns4:Identifier>
+                                <ns4:IdentifierCode>String</ns4:IdentifierCode>
+                                <ns4:Phone>String</ns4:Phone>
+                            </ns4:ContactInformation>
+                            <ns5:Location>
+                                <ns5:AlternativeIdentifier>
+                                    <ns5:Authority>String</ns5:Authority>
+                                    <ns5:Identifier>String</ns5:Identifier>
+                                </ns5:AlternativeIdentifier>
+                            </ns5:Location>
+                            <ns7:PartnerIdentification>
+                                <ns7:PartnerName>String</ns7:PartnerName>
+                                <ns5:AlternativeIdentifier>
+                                    <ns5:Authority>String</ns5:Authority>
+                                    <ns5:Identifier>String</ns5:Identifier>
+                                </ns5:AlternativeIdentifier>
+                            </ns7:PartnerIdentification>
+                            <ns5:PhysicalAddress>
+                                <ns5:AddressLine1>String</ns5:AddressLine1>
+                                <ns5:AddressLine2>String</ns5:AddressLine2>
+                                <ns5:AddressLine3>String</ns5:AddressLine3>
+                                <ns5:AddressLine4>String</ns5:AddressLine4>
+                                <ns5:AddressLine5>String</ns5:AddressLine5>
+                                <ns5:CityName>String</ns5:CityName>
+                                <ns8:Country identifier="Country" codeListVersion="01.01" agency="RosettaNet">MG</ns8:Country>
+                                <ns9:CountrySubdivision identifier="CountrySubdivision" codeListVersion="01.01" agency="RosettaNet">MG-T</ns9:CountrySubdivision>
+                                <ns5:PostalCode>String</ns5:PostalCode>
+                                <ns5:PostOfficeBox>String</ns5:PostOfficeBox>
+                            </ns5:PhysicalAddress>
+                            <ns10:ProcessRoleIdentifier identifier="ProcessRoleIdentifier" codeListVersion="01.10" agency="RosettaNet">ADM</ns10:ProcessRoleIdentifier>
+                        </ns7:FullPartner>
+                    </ns7:PartnerDescription>
+                    <ns51:PortalAccess>
+                        <ns51:AuthorizationCode>String</ns51:AuthorizationCode>
+                        <ns51:Url>String</ns51:Url>
+                    </ns51:PortalAccess>
+                    <ns56:PurchaseOrderFillPriority identifier="PurchaseOrderFillPriority" codeListVersion="01.01" agency="RosettaNet">HIG</ns56:PurchaseOrderFillPriority>
+                    <ns61:RequestedEvent>
+                        <ns17:DateTimePeriod>
+                            <ns17:Begin>2005-02-15T08:30:00+08:00</ns17:Begin>
+                            <ns17:End>2005-02-15T08:30:00+08:00</ns17:End>
+                        </ns17:DateTimePeriod>
+                        <ns50:TransportEvent identifier="TransportEvent" codeListVersion="01.01" agency="RosettaNet">DOC</ns50:TransportEvent>
+                    </ns61:RequestedEvent>
+                    <ns61:RequestedShipFrom>
+                        <ns5:AlternativeIdentifier>
+                            <ns5:Authority>String</ns5:Authority>
+                            <ns5:Identifier>String</ns5:Identifier>
+                        </ns5:AlternativeIdentifier>
+                    </ns61:RequestedShipFrom>
+                    <ns61:RequestedUnitPrice>
+                        <ns19:AmountType identifier="AmountType" codeListVersion="01.02" agency="RosettaNet">DIP</ns19:AmountType>
+                        <ns13:FinancialAmount>
+                            <ns13:Amount>3.14159</ns13:Amount>
+                            <ns14:Currency identifier="Currency" codeListVersion="01.01" agency="RosettaNet">USD</ns14:Currency>
+                            <ns13:Identifier>String</ns13:Identifier>
+                        </ns13:FinancialAmount>
+                        <ns20:InvoiceChargeType identifier="InvoiceChargeType" codeListVersion="01.01" agency="RosettaNet">ALC</ns20:InvoiceChargeType>
+                        <ns21:MonetaryAmountType identifier="MonetaryAmountType" codeListVersion="01.00" agency="RosettaNet">CRE</ns21:MonetaryAmountType>
+                    </ns61:RequestedUnitPrice>
+                    <ns61:ShipToPartnerSubLine>
+                        <ns4:ContactInformation>
+                            <ns4:Contact>String</ns4:Contact>
+                            <ns4:Email>String</ns4:Email>
+                            <ns4:Fax>String</ns4:Fax>
+                            <ns4:Identifier>String</ns4:Identifier>
+                            <ns4:IdentifierCode>String</ns4:IdentifierCode>
+                            <ns4:Phone>String</ns4:Phone>
+                        </ns4:ContactInformation>
+                        <ns5:Location>
+                            <ns5:AlternativeIdentifier>
+                                <ns5:Authority>String</ns5:Authority>
+                                <ns5:Identifier>String</ns5:Identifier>
+                            </ns5:AlternativeIdentifier>
+                        </ns5:Location>
+                        <ns7:PartnerIdentification>
+                            <ns7:PartnerName>String</ns7:PartnerName>
+                            <ns5:AlternativeIdentifier>
+                                <ns5:Authority>String</ns5:Authority>
+                                <ns5:Identifier>String</ns5:Identifier>
+                            </ns5:AlternativeIdentifier>
+                        </ns7:PartnerIdentification>
+                        <ns5:PhysicalAddress>
+                            <ns5:AddressLine1>String</ns5:AddressLine1>
+                            <ns5:AddressLine2>String</ns5:AddressLine2>
+                            <ns5:AddressLine3>String</ns5:AddressLine3>
+                            <ns5:AddressLine4>String</ns5:AddressLine4>
+                            <ns5:AddressLine5>String</ns5:AddressLine5>
+                            <ns5:CityName>String</ns5:CityName>
+                            <ns8:Country identifier="Country" codeListVersion="01.01" agency="RosettaNet">MG</ns8:Country>
+                            <ns9:CountrySubdivision identifier="CountrySubdivision" codeListVersion="01.01" agency="RosettaNet">MG-T</ns9:CountrySubdivision>
+                            <ns5:PostalCode>String</ns5:PostalCode>
+                            <ns5:PostOfficeBox>String</ns5:PostOfficeBox>
+                        </ns5:PhysicalAddress>
+                    </ns61:ShipToPartnerSubLine>
+                    <ns61:SubLineItem>String</ns61:SubLineItem>
+                    <ns33:UnitOfMeasure identifier="UnitOfMeasure" codeListVersion="01.03" agency="RosettaNet">10P</ns33:UnitOfMeasure>
+                </ns61:ProductSubLineItem>
+                <ns56:PurchaseOrderFillPriority identifier="PurchaseOrderFillPriority" codeListVersion="01.01" agency="RosettaNet">HIG</ns56:PurchaseOrderFillPriority>
+                <ns61:RequestedEvent>
+                    <ns17:DateTimePeriod>
+                        <ns17:Begin>2005-02-15T08:30:00+08:00</ns17:Begin>
+                        <ns17:End>2005-02-15T08:30:00+08:00</ns17:End>
+                    </ns17:DateTimePeriod>
+                    <ns50:TransportEvent identifier="TransportEvent" codeListVersion="01.01" agency="RosettaNet">DOC</ns50:TransportEvent>
+                </ns61:RequestedEvent>
+                <ns61:RequestedShipFrom>
+                    <ns5:AlternativeIdentifier>
+                        <ns5:Authority>String</ns5:Authority>
+                        <ns5:Identifier>String</ns5:Identifier>
+                    </ns5:AlternativeIdentifier>
+                </ns61:RequestedShipFrom>
+                <ns61:RequestedUnitPrice>
+                    <ns19:AmountType identifier="AmountType" codeListVersion="01.02" agency="RosettaNet">DIP</ns19:AmountType>
+                    <ns13:FinancialAmount>
+                        <ns13:Amount>3.14159</ns13:Amount>
+                        <ns14:Currency identifier="Currency" codeListVersion="01.01" agency="RosettaNet">USD</ns14:Currency>
+                        <ns13:Identifier>String</ns13:Identifier>
+                    </ns13:FinancialAmount>
+                    <ns20:InvoiceChargeType identifier="InvoiceChargeType" codeListVersion="01.01" agency="RosettaNet">ALC</ns20:InvoiceChargeType>
+                    <ns21:MonetaryAmountType identifier="MonetaryAmountType" codeListVersion="01.00" agency="RosettaNet">CRE</ns21:MonetaryAmountType>
+                </ns61:RequestedUnitPrice>
+                <ns61:ShipTo>
+                    <ns7:SpecifiedFullPartner>
+                        <ns4:ContactInformation>
+                            <ns4:Contact>String</ns4:Contact>
+                            <ns4:Email>String</ns4:Email>
+                            <ns4:Fax>String</ns4:Fax>
+                            <ns4:Identifier>String</ns4:Identifier>
+                            <ns4:IdentifierCode>String</ns4:IdentifierCode>
+                            <ns4:Phone>String</ns4:Phone>
+                        </ns4:ContactInformation>
+                        <ns5:Location>
+                            <ns5:AlternativeIdentifier>
+                                <ns5:Authority>String</ns5:Authority>
+                                <ns5:Identifier>String</ns5:Identifier>
+                            </ns5:AlternativeIdentifier>
+                        </ns5:Location>
+                        <ns7:PartnerIdentification>
+                            <ns7:PartnerName>String</ns7:PartnerName>
+                            <ns5:AlternativeIdentifier>
+                                <ns5:Authority>String</ns5:Authority>
+                                <ns5:Identifier>String</ns5:Identifier>
+                            </ns5:AlternativeIdentifier>
+                        </ns7:PartnerIdentification>
+                        <ns5:PhysicalAddress>
+                            <ns5:AddressLine1>String</ns5:AddressLine1>
+                            <ns5:AddressLine2>String</ns5:AddressLine2>
+                            <ns5:AddressLine3>String</ns5:AddressLine3>
+                            <ns5:AddressLine4>String</ns5:AddressLine4>
+                            <ns5:AddressLine5>String</ns5:AddressLine5>
+                            <ns5:CityName>String</ns5:CityName>
+                            <ns8:Country identifier="Country" codeListVersion="01.01" agency="RosettaNet">MG</ns8:Country>
+                            <ns9:CountrySubdivision identifier="CountrySubdivision" codeListVersion="01.01" agency="RosettaNet">MG-T</ns9:CountrySubdivision>
+                            <ns5:PostalCode>String</ns5:PostalCode>
+                            <ns5:PostOfficeBox>String</ns5:PostOfficeBox>
+                        </ns5:PhysicalAddress>
+                    </ns7:SpecifiedFullPartner>
+                </ns61:ShipTo>
+                <ns51:SpecialDiscount>
+                    <ns51:DiscountedPrice>
+                        <ns18:MonetaryAmount>
+                            <ns19:AmountType identifier="AmountType" codeListVersion="01.02" agency="RosettaNet">DIP</ns19:AmountType>
+                            <ns13:FinancialAmount>
+                                <ns13:Amount>3.14159</ns13:Amount>
+                                <ns14:Currency identifier="Currency" codeListVersion="01.01" agency="RosettaNet">USD</ns14:Currency>
+                                <ns13:Identifier>String</ns13:Identifier>
+                            </ns13:FinancialAmount>
+                            <ns20:InvoiceChargeType identifier="InvoiceChargeType" codeListVersion="01.01" agency="RosettaNet">ALC</ns20:InvoiceChargeType>
+                            <ns21:MonetaryAmountType identifier="MonetaryAmountType" codeListVersion="01.00" agency="RosettaNet">CRE</ns21:MonetaryAmountType>
+                        </ns18:MonetaryAmount>
+                        <ns22:PricingTypeCode identifier="PricingTypeCode" codeListVersion="01.03" agency="RosettaNet">ACR</ns22:PricingTypeCode>
+                    </ns51:DiscountedPrice>
+                    <ns51:Identifier>String</ns51:Identifier>
+                    <ns51:Percentage>999999</ns51:Percentage>
+                </ns51:SpecialDiscount>
+                <ns51:TaxExemptStatus>
+                    <ns51:IsTaxExempt>true</ns51:IsTaxExempt>
+                    <ns51:TaxExemption>
+                        <ns51:CertificationIdentifier>String</ns51:CertificationIdentifier>
+                        <ns51:Mode>String</ns51:Mode>
+                        <ns49:TaxExemptionCode identifier="TaxExemptionCode" codeListVersion="01.02" agency="RosettaNet">AGR</ns49:TaxExemptionCode>
+                    </ns51:TaxExemption>
+                </ns51:TaxExemptStatus>
+                <ns61:TotalLineItemAmount>
+                    <ns19:AmountType identifier="AmountType" codeListVersion="01.02" agency="RosettaNet">DIP</ns19:AmountType>
+                    <ns13:FinancialAmount>
+                        <ns13:Amount>3.14159</ns13:Amount>
+                        <ns14:Currency identifier="Currency" codeListVersion="01.01" agency="RosettaNet">USD</ns14:Currency>
+                        <ns13:Identifier>String</ns13:Identifier>
+                    </ns13:FinancialAmount>
+                    <ns20:InvoiceChargeType identifier="InvoiceChargeType" codeListVersion="01.01" agency="RosettaNet">ALC</ns20:InvoiceChargeType>
+                    <ns21:MonetaryAmountType identifier="MonetaryAmountType" codeListVersion="01.00" agency="RosettaNet">CRE</ns21:MonetaryAmountType>
+                </ns61:TotalLineItemAmount>
+                <ns33:UnitOfMeasure identifier="UnitOfMeasure" codeListVersion="01.03" agency="RosettaNet">10P</ns33:UnitOfMeasure>
+            </ns61:ProductLineItem>
+        </ns61:OrderLineItem>
+        <ns51:OrderShippingInformation>
+            <ns18:CarrierInformation>
+                <ns18:Identifier>String</ns18:Identifier>
+                <ns18:SCAC>Str</ns18:SCAC>
+            </ns18:CarrierInformation>
+            <ns37:FreeOnBoard identifier="FreeOnBoard" codeListVersion="01.00" agency="RosettaNet">DES</ns37:FreeOnBoard>
+            <ns51:PackList>String</ns51:PackList>
+            <ns38:ShipmentTerms identifier="ShipmentTerms" codeListVersion="01.01" agency="RosettaNet">ADC</ns38:ShipmentTerms>
+            <ns39:ShippingServiceLevel identifier="ShippingServiceLevel" codeListVersion="01.00" agency="RosettaNet">1BD</ns39:ShippingServiceLevel>
+            <ns40:SpecialFulfillmentRequest identifier="SpecialFulfillmentRequest" codeListVersion="01.01" agency="RosettaNet">AQM</ns40:SpecialFulfillmentRequest>
+            <ns51:SpecialHandlingInstruction>
+                <ns41:SpecialHandling identifier="SpecialHandling" codeListVersion="01.04" agency="RosettaNet">15M</ns41:SpecialHandling>
+                <ns51:Text>String</ns51:Text>
+            </ns51:SpecialHandlingInstruction>
+        </ns51:OrderShippingInformation>
+        <ns7:PartnerDescription>
+            <ns7:FullPartner>
+                <ns4:ContactInformation>
+                    <ns4:Contact>String</ns4:Contact>
+                    <ns4:Email>String</ns4:Email>
+                    <ns4:Fax>String</ns4:Fax>
+                    <ns4:Identifier>String</ns4:Identifier>
+                    <ns4:IdentifierCode>String</ns4:IdentifierCode>
+                    <ns4:Phone>String</ns4:Phone>
+                </ns4:ContactInformation>
+                <ns5:Location>
+                    <ns5:AlternativeIdentifier>
+                        <ns5:Authority>String</ns5:Authority>
+                        <ns5:Identifier>String</ns5:Identifier>
+                    </ns5:AlternativeIdentifier>
+                </ns5:Location>
+                <ns7:PartnerIdentification>
+                    <ns7:PartnerName>String</ns7:PartnerName>
+                    <ns5:AlternativeIdentifier>
+                        <ns5:Authority>String</ns5:Authority>
+                        <ns5:Identifier>String</ns5:Identifier>
+                    </ns5:AlternativeIdentifier>
+                </ns7:PartnerIdentification>
+                <ns5:PhysicalAddress>
+                    <ns5:AddressLine1>String</ns5:AddressLine1>
+                    <ns5:AddressLine2>String</ns5:AddressLine2>
+                    <ns5:AddressLine3>String</ns5:AddressLine3>
+                    <ns5:AddressLine4>String</ns5:AddressLine4>
+                    <ns5:AddressLine5>String</ns5:AddressLine5>
+                    <ns5:CityName>String</ns5:CityName>
+                    <ns8:Country identifier="Country" codeListVersion="01.01" agency="RosettaNet">MG</ns8:Country>
+                    <ns9:CountrySubdivision identifier="CountrySubdivision" codeListVersion="01.01" agency="RosettaNet">MG-T</ns9:CountrySubdivision>
+                    <ns5:PostalCode>String</ns5:PostalCode>
+                    <ns5:PostOfficeBox>String</ns5:PostOfficeBox>
+                </ns5:PhysicalAddress>
+                <ns10:ProcessRoleIdentifier identifier="ProcessRoleIdentifier" codeListVersion="01.10" agency="RosettaNet">ADM</ns10:ProcessRoleIdentifier>
+            </ns7:FullPartner>
+        </ns7:PartnerDescription>
+        <ns51:PortalAccess>
+            <ns51:AuthorizationCode>String</ns51:AuthorizationCode>
+            <ns51:Url>String</ns51:Url>
+        </ns51:PortalAccess>
+        <ns56:PurchaseOrderFillPriority identifier="PurchaseOrderFillPriority" codeListVersion="01.01" agency="RosettaNet">HIG</ns56:PurchaseOrderFillPriority>
+        <ns58:PurchaseOrderType identifier="PurchaseOrderType" codeListVersion="01.05" agency="RosettaNet">ADD</ns58:PurchaseOrderType>
+        <ns61:RequestedEvent>
+            <ns17:DateTimePeriod>
+                <ns17:Begin>2005-02-15T08:30:00+08:00</ns17:Begin>
+                <ns17:End>2005-02-15T08:30:00+08:00</ns17:End>
+            </ns17:DateTimePeriod>
+            <ns50:TransportEvent identifier="TransportEvent" codeListVersion="01.01" agency="RosettaNet">DOC</ns50:TransportEvent>
+        </ns61:RequestedEvent>
+        <ns51:SecondaryBuyer>
+            <ns51:Identifier>String</ns51:Identifier>
+            <ns7:PartnerDescription>
+                <ns7:FullPartner>
+                    <ns4:ContactInformation>
+                        <ns4:Contact>String</ns4:Contact>
+                        <ns4:Email>String</ns4:Email>
+                        <ns4:Fax>String</ns4:Fax>
+                        <ns4:Identifier>String</ns4:Identifier>
+                        <ns4:IdentifierCode>String</ns4:IdentifierCode>
+                        <ns4:Phone>String</ns4:Phone>
+                    </ns4:ContactInformation>
+                    <ns5:Location>
+                        <ns5:AlternativeIdentifier>
+                            <ns5:Authority>String</ns5:Authority>
+                            <ns5:Identifier>String</ns5:Identifier>
+                        </ns5:AlternativeIdentifier>
+                    </ns5:Location>
+                    <ns7:PartnerIdentification>
+                        <ns7:PartnerName>String</ns7:PartnerName>
+                        <ns5:AlternativeIdentifier>
+                            <ns5:Authority>String</ns5:Authority>
+                            <ns5:Identifier>String</ns5:Identifier>
+                        </ns5:AlternativeIdentifier>
+                    </ns7:PartnerIdentification>
+                    <ns5:PhysicalAddress>
+                        <ns5:AddressLine1>String</ns5:AddressLine1>
+                        <ns5:AddressLine2>String</ns5:AddressLine2>
+                        <ns5:AddressLine3>String</ns5:AddressLine3>
+                        <ns5:AddressLine4>String</ns5:AddressLine4>
+                        <ns5:AddressLine5>String</ns5:AddressLine5>
+                        <ns5:CityName>String</ns5:CityName>
+                        <ns8:Country identifier="Country" codeListVersion="01.01" agency="RosettaNet">MG</ns8:Country>
+                        <ns9:CountrySubdivision identifier="CountrySubdivision" codeListVersion="01.01" agency="RosettaNet">MG-T</ns9:CountrySubdivision>
+                        <ns5:PostalCode>String</ns5:PostalCode>
+                        <ns5:PostOfficeBox>String</ns5:PostOfficeBox>
+                    </ns5:PhysicalAddress>
+                    <ns10:ProcessRoleIdentifier identifier="ProcessRoleIdentifier" codeListVersion="01.10" agency="RosettaNet">ADM</ns10:ProcessRoleIdentifier>
+                </ns7:FullPartner>
+            </ns7:PartnerDescription>
+        </ns51:SecondaryBuyer>
+        <ns51:SpecialDiscount>
+            <ns51:DiscountedPrice>
+                <ns18:MonetaryAmount>
+                    <ns19:AmountType identifier="AmountType" codeListVersion="01.02" agency="RosettaNet">DIP</ns19:AmountType>
+                    <ns13:FinancialAmount>
+                        <ns13:Amount>3.14159</ns13:Amount>
+                        <ns14:Currency identifier="Currency" codeListVersion="01.01" agency="RosettaNet">USD</ns14:Currency>
+                        <ns13:Identifier>String</ns13:Identifier>
+                    </ns13:FinancialAmount>
+                    <ns20:InvoiceChargeType identifier="InvoiceChargeType" codeListVersion="01.01" agency="RosettaNet">ALC</ns20:InvoiceChargeType>
+                    <ns21:MonetaryAmountType identifier="MonetaryAmountType" codeListVersion="01.00" agency="RosettaNet">CRE</ns21:MonetaryAmountType>
+                </ns18:MonetaryAmount>
+                <ns22:PricingTypeCode identifier="PricingTypeCode" codeListVersion="01.03" agency="RosettaNet">ACR</ns22:PricingTypeCode>
+            </ns51:DiscountedPrice>
+            <ns51:Identifier>String</ns51:Identifier>
+            <ns51:Percentage>999999</ns51:Percentage>
+        </ns51:SpecialDiscount>
+        <ns51:TaxExemptStatus>
+            <ns51:IsTaxExempt>true</ns51:IsTaxExempt>
+            <ns51:TaxExemption>
+                <ns51:CertificationIdentifier>String</ns51:CertificationIdentifier>
+                <ns51:Mode>String</ns51:Mode>
+                <ns49:TaxExemptionCode identifier="TaxExemptionCode" codeListVersion="01.02" agency="RosettaNet">AGR</ns49:TaxExemptionCode>
+            </ns51:TaxExemption>
+        </ns51:TaxExemptStatus>
+        <ns61:TotalAmount>
+            <ns19:AmountType identifier="AmountType" codeListVersion="01.02" agency="RosettaNet">DIP</ns19:AmountType>
+            <ns13:FinancialAmount>
+                <ns13:Amount>3.14159</ns13:Amount>
+                <ns14:Currency identifier="Currency" codeListVersion="01.01" agency="RosettaNet">USD</ns14:Currency>
+                <ns13:Identifier>String</ns13:Identifier>
+            </ns13:FinancialAmount>
+            <ns20:InvoiceChargeType identifier="InvoiceChargeType" codeListVersion="01.01" agency="RosettaNet">ALC</ns20:InvoiceChargeType>
+            <ns21:MonetaryAmountType identifier="MonetaryAmountType" codeListVersion="01.00" agency="RosettaNet">CRE</ns21:MonetaryAmountType>
+        </ns61:TotalAmount>
+    </ns61:PurchaseOrder>
+</ns61:PurchaseOrderRequest>

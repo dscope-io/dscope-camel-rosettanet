@@ -1,0 +1,54 @@
+name: Karavan Metadata Sync
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - name: Build project
+        run: mvn -q -DskipTests install
+
+      - name: Generate Karavan metadata
+        run: mvn -q -Pkaravan-metadata exec:java -Dexec.mainClass=io.dscope.tools.karavan.RosettaNetKaravanModelGenerator
+
+      - name: Detect changes
+        id: gitdiff
+        run: |
+          if [[ -n "$(git status --porcelain src/main/resources/karavan)" ]]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push metadata update
+        if: steps.gitdiff.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B karavan-metadata-update
+          git add src/main/resources/karavan
+          git commit -m "chore: regenerate Karavan metadata"
+          git push --force --set-upstream origin karavan-metadata-update
+
+      - name: Open PR
+        if: steps.gitdiff.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: karavan-metadata-update
+          title: "chore: regenerate Karavan metadata"
+          body: "Automated regeneration of Karavan metadata from JAXB models"
+          labels: karavan

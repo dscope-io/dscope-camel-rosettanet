@@ -1,0 +1,6 @@
+{
+  "PurchaseOrderRequestType.documentHeader": "Document Header",
+  "PurchaseOrderRequestType.purchaseOrder": "Purchase Order",
+  "StandardDocumentIdentificationType.version": "STD Version",
+  "OrderQuantityType.requestedQuantity": "Requested Qty"
+}

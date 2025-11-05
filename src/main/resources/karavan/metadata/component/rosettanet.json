@@ -1,0 +1,40 @@
+{
+  "component": {
+    "name": "rosettanet",
+    "title": "RosettaNet",
+    "scheme": "rosettanet",
+    "syntax": "rosettanet:messageType",
+    "javaType": "io.dscope.camel.rosettanet.RosettaNetComponent",
+    "description": "Camel component for RosettaNet PIP XML exchange (un/marshal, validate, helpers).",
+    "label": "rosettanet,xml,b2b,interop",
+    "producerOnly": true,
+    "deprecated": false
+  },
+  "endpointProperties": [
+    {
+      "name": "messageType",
+      "kind": "path",
+      "label": "common",
+      "type": "string",
+      "required": true,
+      "description": "PIP message type, e.g. PIP3A4:02_05:PurchaseOrderRequest"
+    },
+    {
+      "name": "validate",
+      "kind": "parameter",
+      "label": "advanced",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": false,
+      "description": "Validate XML against the RosettaNet schema set."
+    },
+    {
+      "name": "prettyPrint",
+      "kind": "parameter",
+      "label": "format",
+      "type": "boolean",
+      "defaultValue": true,
+      "description": "Pretty-print marshalled XML."
+    }
+  ]
+}
