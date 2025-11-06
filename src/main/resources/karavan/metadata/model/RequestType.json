@@ -1,0 +1,41 @@
+{
+  "model" : "RequestType",
+  "package" : "io.dscope.rosettanet.interchange.codelist.requesttype.v01_02",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.codelist.requesttype.v01_02.RequestType",
+  "fields" : [ {
+    "name" : "declaredType",
+    "type" : "Class<T>",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "name",
+    "type" : "QName",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "value",
+    "type" : "T",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "scope",
+    "type" : "Class<?>",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "class",
+    "type" : "Class<?>",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  } ]
+}

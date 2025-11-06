@@ -1,7 +1,7 @@
 {
-  "model" : "PurchaseOrderRequestType",
-  "package" : "io.dscope.rosettanet.interchange.purchaseorderrequest.v02_05",
-  "qualifiedName" : "io.dscope.rosettanet.interchange.purchaseorderrequest.v02_05.PurchaseOrderRequestType",
+  "model" : "PriceAndAvailabilityResponseType",
+  "package" : "io.dscope.rosettanet.interchange.priceandavailabilityresponse.v02_01",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.priceandavailabilityresponse.v02_01.PriceAndAvailabilityResponseType",
   "fields" : [ {
     "name" : "documentHeader",
     "type" : "DocumentHeader",
@@ -10,9 +10,9 @@
     "required" : false,
     "description" : ""
   }, {
-    "name" : "purchaseOrder",
-    "type" : "PurchaseOrderType",
-    "cardinality" : "0..1",
+    "name" : "productPriceAndAvailability",
+    "type" : "List<ProductPriceAndAvailabilityType>",
+    "cardinality" : "0..n",
     "jaxbElement" : false,
     "required" : true,
     "description" : ""

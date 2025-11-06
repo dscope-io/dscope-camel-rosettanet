@@ -1,0 +1,55 @@
+{
+  "model" : "ForecastProductScheduleResponseType",
+  "package" : "io.dscope.rosettanet.interchange.forecastreplynotification.v02_01",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.forecastreplynotification.v02_01.ForecastProductScheduleResponseType",
+  "fields" : [ {
+    "name" : "response",
+    "type" : "Response",
+    "cardinality" : "0..1",
+    "jaxbElement" : true,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "revisionReason",
+    "type" : "List<RevisionReason>",
+    "cardinality" : "0..n",
+    "jaxbElement" : true,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "schemaVersion",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "forecastPeriod",
+    "type" : "ForecastPeriod",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "productQuantity",
+    "type" : "ProductQuantity",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "scheduleProductForecastIdentifier",
+    "type" : "List<ForecastIdentifierReferenceType>",
+    "cardinality" : "0..n",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "class",
+    "type" : "Class<?>",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  } ]
+}

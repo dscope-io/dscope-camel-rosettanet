@@ -1,7 +1,7 @@
 {
-  "model" : "PurchaseOrderRequestType",
-  "package" : "io.dscope.rosettanet.interchange.purchaseorderrequest.v02_05",
-  "qualifiedName" : "io.dscope.rosettanet.interchange.purchaseorderrequest.v02_05.PurchaseOrderRequestType",
+  "model" : "WarrantyClaimRequestType",
+  "package" : "io.dscope.rosettanet.interchange.warrantyclaimrequest.v01_01",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.warrantyclaimrequest.v01_01.WarrantyClaimRequestType",
   "fields" : [ {
     "name" : "documentHeader",
     "type" : "DocumentHeader",
@@ -10,8 +10,8 @@
     "required" : false,
     "description" : ""
   }, {
-    "name" : "purchaseOrder",
-    "type" : "PurchaseOrderType",
+    "name" : "warrantyClaimRequestData",
+    "type" : "WarrantyClaimRequestDataType",
     "cardinality" : "0..1",
     "jaxbElement" : false,
     "required" : true,

@@ -1,7 +1,7 @@
 {
-  "model" : "PurchaseOrderRequestType",
-  "package" : "io.dscope.rosettanet.interchange.purchaseorderrequest.v02_05",
-  "qualifiedName" : "io.dscope.rosettanet.interchange.purchaseorderrequest.v02_05.PurchaseOrderRequestType",
+  "model" : "PurchaseOrderChangeRequestType",
+  "package" : "io.dscope.rosettanet.interchange.purchaseorderchangerequest.v02_05",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.purchaseorderchangerequest.v02_05.PurchaseOrderChangeRequestType",
   "fields" : [ {
     "name" : "documentHeader",
     "type" : "DocumentHeader",

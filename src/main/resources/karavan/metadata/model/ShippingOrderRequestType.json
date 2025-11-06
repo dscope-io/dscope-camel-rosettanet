@@ -1,7 +1,7 @@
 {
-  "model" : "PurchaseOrderRequestType",
-  "package" : "io.dscope.rosettanet.interchange.purchaseorderrequest.v02_05",
-  "qualifiedName" : "io.dscope.rosettanet.interchange.purchaseorderrequest.v02_05.PurchaseOrderRequestType",
+  "model" : "ShippingOrderRequestType",
+  "package" : "io.dscope.rosettanet.interchange.shippingorderrequest.v02_04",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.shippingorderrequest.v02_04.ShippingOrderRequestType",
   "fields" : [ {
     "name" : "documentHeader",
     "type" : "DocumentHeader",
@@ -10,8 +10,8 @@
     "required" : false,
     "description" : ""
   }, {
-    "name" : "purchaseOrder",
-    "type" : "PurchaseOrderType",
+    "name" : "shippingOrder",
+    "type" : "ShippingOrderType",
     "cardinality" : "0..1",
     "jaxbElement" : false,
     "required" : true,

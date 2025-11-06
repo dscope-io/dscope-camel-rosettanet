@@ -1,20 +1,20 @@
 {
-  "model" : "PurchaseOrderRequestType",
-  "package" : "io.dscope.rosettanet.interchange.purchaseorderrequest.v02_05",
-  "qualifiedName" : "io.dscope.rosettanet.interchange.purchaseorderrequest.v02_05.PurchaseOrderRequestType",
+  "model" : "DesignRegistrationRequestType",
+  "package" : "io.dscope.rosettanet.interchange.designregistrationrequest.v02_00",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.designregistrationrequest.v02_00.DesignRegistrationRequestType",
   "fields" : [ {
+    "name" : "designProjectInformation",
+    "type" : "DesignProjectInformationType",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : true,
+    "description" : ""
+  }, {
     "name" : "documentHeader",
     "type" : "DocumentHeader",
     "cardinality" : "0..1",
     "jaxbElement" : true,
     "required" : false,
-    "description" : ""
-  }, {
-    "name" : "purchaseOrder",
-    "type" : "PurchaseOrderType",
-    "cardinality" : "0..1",
-    "jaxbElement" : false,
-    "required" : true,
     "description" : ""
   }, {
     "name" : "schemaVersion",

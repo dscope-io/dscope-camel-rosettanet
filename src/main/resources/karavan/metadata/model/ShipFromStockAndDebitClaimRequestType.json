@@ -1,7 +1,7 @@
 {
-  "model" : "PurchaseOrderRequestType",
-  "package" : "io.dscope.rosettanet.interchange.purchaseorderrequest.v02_05",
-  "qualifiedName" : "io.dscope.rosettanet.interchange.purchaseorderrequest.v02_05.PurchaseOrderRequestType",
+  "model" : "ShipFromStockAndDebitClaimRequestType",
+  "package" : "io.dscope.rosettanet.interchange.shipfromstockanddebitclaimrequestnotification.v01_00",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.shipfromstockanddebitclaimrequestnotification.v01_00.ShipFromStockAndDebitClaimRequestType",
   "fields" : [ {
     "name" : "documentHeader",
     "type" : "DocumentHeader",
@@ -10,8 +10,8 @@
     "required" : false,
     "description" : ""
   }, {
-    "name" : "purchaseOrder",
-    "type" : "PurchaseOrderType",
+    "name" : "resource",
+    "type" : "ResourceType",
     "cardinality" : "0..1",
     "jaxbElement" : false,
     "required" : true,
