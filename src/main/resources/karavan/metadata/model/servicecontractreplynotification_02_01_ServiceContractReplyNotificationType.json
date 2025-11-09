@@ -1,0 +1,37 @@
+{
+  "model" : "ServiceContractReplyNotificationType",
+  "package" : "io.dscope.rosettanet.interchange.servicecontractreplynotification.v02_01",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.servicecontractreplynotification.v02_01.ServiceContractReplyNotificationType",
+  "pipName" : "6A2",
+  "version" : "02_01",
+  "messageType" : "servicecontractreplynotification",
+  "fields" : [ {
+    "name" : "documentHeader",
+    "type" : "DocumentHeader",
+    "cardinality" : "0..1",
+    "jaxbElement" : true,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "serviceContract",
+    "type" : "ServiceContractType",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : true,
+    "description" : ""
+  }, {
+    "name" : "schemaVersion",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "class",
+    "type" : "Class<?>",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  } ]
+}

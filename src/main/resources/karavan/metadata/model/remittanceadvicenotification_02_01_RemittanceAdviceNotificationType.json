@@ -1,0 +1,37 @@
+{
+  "model" : "RemittanceAdviceNotificationType",
+  "package" : "io.dscope.rosettanet.interchange.remittanceadvicenotification.v02_01",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.remittanceadvicenotification.v02_01.RemittanceAdviceNotificationType",
+  "pipName" : "3C6",
+  "version" : "02_01",
+  "messageType" : "remittanceadvicenotification",
+  "fields" : [ {
+    "name" : "documentHeader",
+    "type" : "DocumentHeader",
+    "cardinality" : "0..1",
+    "jaxbElement" : true,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "remittanceAdvice",
+    "type" : "RemittanceAdviceType",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : true,
+    "description" : ""
+  }, {
+    "name" : "schemaVersion",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "class",
+    "type" : "Class<?>",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  } ]
+}

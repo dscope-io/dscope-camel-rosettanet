@@ -1,0 +1,65 @@
+{
+  "model" : "MaterialCompositionInformationDistributionType",
+  "package" : "io.dscope.rosettanet.interchange.materialcompositioninformationdistribution.v01_02",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.materialcompositioninformationdistribution.v01_02.MaterialCompositionInformationDistributionType",
+  "pipName" : "2A13",
+  "version" : "01_02",
+  "messageType" : "materialcompositioninformationdistribution",
+  "fields" : [ {
+    "name" : "agreementIdentifier",
+    "type" : "BusinessDocumentReferenceType",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "authorizer",
+    "type" : "List<ContactInformationType>",
+    "cardinality" : "0..n",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "creator",
+    "type" : "List<ContactInformationType>",
+    "cardinality" : "0..n",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "documentHeader",
+    "type" : "DocumentHeader",
+    "cardinality" : "0..1",
+    "jaxbElement" : true,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "productInformation",
+    "type" : "List<ProductInformationType>",
+    "cardinality" : "0..n",
+    "jaxbElement" : false,
+    "required" : true,
+    "description" : ""
+  }, {
+    "name" : "productInformationHeader",
+    "type" : "ProductInformationHeaderType",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "schemaVersion",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "class",
+    "type" : "Class<?>",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  } ]
+}

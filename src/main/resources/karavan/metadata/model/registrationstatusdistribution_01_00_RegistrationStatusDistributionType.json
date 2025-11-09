@@ -1,0 +1,37 @@
+{
+  "model" : "RegistrationStatusDistributionType",
+  "package" : "io.dscope.rosettanet.interchange.registrationstatusdistribution.v01_00",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.registrationstatusdistribution.v01_00.RegistrationStatusDistributionType",
+  "pipName" : "5C4",
+  "version" : "01_00",
+  "messageType" : "registrationstatusdistribution",
+  "fields" : [ {
+    "name" : "designStatusNotification",
+    "type" : "DesignStatusNotificationType",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : true,
+    "description" : ""
+  }, {
+    "name" : "documentHeader",
+    "type" : "DocumentHeader",
+    "cardinality" : "0..1",
+    "jaxbElement" : true,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "schemaVersion",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "class",
+    "type" : "Class<?>",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  } ]
+}

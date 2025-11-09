@@ -1,0 +1,37 @@
+{
+  "model" : "MaterialReleaseNotificationType",
+  "package" : "io.dscope.rosettanet.interchange.materialreleasenotification.v02_00",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.materialreleasenotification.v02_00.MaterialReleaseNotificationType",
+  "pipName" : "4D1",
+  "version" : "02_00",
+  "messageType" : "materialreleasenotification",
+  "fields" : [ {
+    "name" : "documentHeader",
+    "type" : "DocumentHeader",
+    "cardinality" : "0..1",
+    "jaxbElement" : true,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "materialRelease",
+    "type" : "MaterialReleaseType",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : true,
+    "description" : ""
+  }, {
+    "name" : "schemaVersion",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "class",
+    "type" : "Class<?>",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  } ]
+}

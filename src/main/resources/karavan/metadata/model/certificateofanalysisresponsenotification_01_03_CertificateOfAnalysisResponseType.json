@@ -1,0 +1,44 @@
+{
+  "model" : "CertificateOfAnalysisResponseType",
+  "package" : "io.dscope.rosettanet.interchange.certificateofanalysisresponsenotification.v01_03",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.certificateofanalysisresponsenotification.v01_03.CertificateOfAnalysisResponseType",
+  "pipName" : "2A18",
+  "version" : "01_03",
+  "messageType" : "certificateofanalysisresponsenotification",
+  "fields" : [ {
+    "name" : "businessDocumentReference",
+    "type" : "List<BusinessDocumentReference>",
+    "cardinality" : "0..n",
+    "jaxbElement" : true,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "comment",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "responseStatus",
+    "type" : "ResponseStatusType",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : true,
+    "description" : ""
+  }, {
+    "name" : "schemaVersion",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "class",
+    "type" : "Class<?>",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  } ]
+}

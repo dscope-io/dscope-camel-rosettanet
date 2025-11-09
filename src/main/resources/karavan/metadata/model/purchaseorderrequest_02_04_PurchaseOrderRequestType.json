@@ -1,0 +1,37 @@
+{
+  "model" : "PurchaseOrderRequestType",
+  "package" : "io.dscope.rosettanet.interchange.purchaseorderrequest.v02_04",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.purchaseorderrequest.v02_04.PurchaseOrderRequestType",
+  "pipName" : "3A4",
+  "version" : "02_04",
+  "messageType" : "purchaseorderrequest",
+  "fields" : [ {
+    "name" : "documentHeader",
+    "type" : "DocumentHeader",
+    "cardinality" : "0..1",
+    "jaxbElement" : true,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "purchaseOrder",
+    "type" : "PurchaseOrderType",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : true,
+    "description" : ""
+  }, {
+    "name" : "schemaVersion",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "class",
+    "type" : "Class<?>",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  } ]
+}

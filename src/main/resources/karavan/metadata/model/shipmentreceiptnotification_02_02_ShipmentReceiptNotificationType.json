@@ -1,0 +1,37 @@
+{
+  "model" : "ShipmentReceiptNotificationType",
+  "package" : "io.dscope.rosettanet.interchange.shipmentreceiptnotification.v02_02",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.shipmentreceiptnotification.v02_02.ShipmentReceiptNotificationType",
+  "pipName" : "4B2",
+  "version" : "02_02",
+  "messageType" : "shipmentreceiptnotification",
+  "fields" : [ {
+    "name" : "documentHeader",
+    "type" : "DocumentHeader",
+    "cardinality" : "0..1",
+    "jaxbElement" : true,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "shipmentReceipt",
+    "type" : "ShipmentReceiptType",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : true,
+    "description" : ""
+  }, {
+    "name" : "schemaVersion",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "class",
+    "type" : "Class<?>",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  } ]
+}

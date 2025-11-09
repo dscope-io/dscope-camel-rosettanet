@@ -1,0 +1,37 @@
+{
+  "model" : "ForecastReplyNotificationType",
+  "package" : "io.dscope.rosettanet.interchange.forecastreplynotification.v02_01",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.forecastreplynotification.v02_01.ForecastReplyNotificationType",
+  "pipName" : "4A5",
+  "version" : "02_01",
+  "messageType" : "forecastreplynotification",
+  "fields" : [ {
+    "name" : "documentHeader",
+    "type" : "DocumentHeader",
+    "cardinality" : "0..1",
+    "jaxbElement" : true,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "forecastReply",
+    "type" : "ForecastReplyType",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : true,
+    "description" : ""
+  }, {
+    "name" : "schemaVersion",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "class",
+    "type" : "Class<?>",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  } ]
+}

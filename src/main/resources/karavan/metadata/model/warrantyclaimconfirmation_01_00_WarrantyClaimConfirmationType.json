@@ -1,0 +1,37 @@
+{
+  "model" : "WarrantyClaimConfirmationType",
+  "package" : "io.dscope.rosettanet.interchange.warrantyclaimconfirmation.v01_00",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.warrantyclaimconfirmation.v01_00.WarrantyClaimConfirmationType",
+  "pipName" : "6C8",
+  "version" : "01_00",
+  "messageType" : "warrantyclaimconfirmation",
+  "fields" : [ {
+    "name" : "documentHeader",
+    "type" : "DocumentHeader",
+    "cardinality" : "0..1",
+    "jaxbElement" : true,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "warrantyClaimConfirmData",
+    "type" : "WarrantyClaimConfirmDataType",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : true,
+    "description" : ""
+  }, {
+    "name" : "schemaVersion",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "class",
+    "type" : "Class<?>",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  } ]
+}

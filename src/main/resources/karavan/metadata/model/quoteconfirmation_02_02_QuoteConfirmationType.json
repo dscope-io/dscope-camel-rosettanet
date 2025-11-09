@@ -1,0 +1,37 @@
+{
+  "model" : "QuoteConfirmationType",
+  "package" : "io.dscope.rosettanet.interchange.quoteconfirmation.v02_02",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.quoteconfirmation.v02_02.QuoteConfirmationType",
+  "pipName" : "3A1",
+  "version" : "02_02",
+  "messageType" : "quoteconfirmation",
+  "fields" : [ {
+    "name" : "documentHeader",
+    "type" : "DocumentHeader",
+    "cardinality" : "0..1",
+    "jaxbElement" : true,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "quote",
+    "type" : "QuoteType",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : true,
+    "description" : ""
+  }, {
+    "name" : "schemaVersion",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "class",
+    "type" : "Class<?>",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  } ]
+}

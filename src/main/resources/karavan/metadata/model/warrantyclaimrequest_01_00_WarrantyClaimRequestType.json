@@ -1,0 +1,37 @@
+{
+  "model" : "WarrantyClaimRequestType",
+  "package" : "io.dscope.rosettanet.interchange.warrantyclaimrequest.v01_00",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.warrantyclaimrequest.v01_00.WarrantyClaimRequestType",
+  "pipName" : "6C7",
+  "version" : "01_00",
+  "messageType" : "warrantyclaimrequest",
+  "fields" : [ {
+    "name" : "documentHeader",
+    "type" : "DocumentHeader",
+    "cardinality" : "0..1",
+    "jaxbElement" : true,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "warrantyClaimRequestData",
+    "type" : "WarrantyClaimRequestDataType",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : true,
+    "description" : ""
+  }, {
+    "name" : "schemaVersion",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "class",
+    "type" : "Class<?>",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  } ]
+}

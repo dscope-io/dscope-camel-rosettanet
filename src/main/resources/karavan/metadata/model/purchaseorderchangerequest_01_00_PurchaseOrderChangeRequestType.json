@@ -1,0 +1,37 @@
+{
+  "model" : "PurchaseOrderChangeRequestType",
+  "package" : "io.dscope.rosettanet.interchange.purchaseorderchangerequest.v01_00",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.purchaseorderchangerequest.v01_00.PurchaseOrderChangeRequestType",
+  "pipName" : "3A21",
+  "version" : "01_00",
+  "messageType" : "purchaseorderchangerequest",
+  "fields" : [ {
+    "name" : "documentHeader",
+    "type" : "DocumentHeader",
+    "cardinality" : "0..1",
+    "jaxbElement" : true,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "purchaseOrder",
+    "type" : "PurchaseOrderType",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : true,
+    "description" : ""
+  }, {
+    "name" : "schemaVersion",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "class",
+    "type" : "Class<?>",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  } ]
+}

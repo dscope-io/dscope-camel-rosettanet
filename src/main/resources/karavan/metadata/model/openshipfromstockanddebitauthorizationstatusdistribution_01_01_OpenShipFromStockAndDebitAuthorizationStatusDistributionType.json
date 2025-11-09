@@ -1,0 +1,37 @@
+{
+  "model" : "OpenShipFromStockAndDebitAuthorizationStatusDistributionType",
+  "package" : "io.dscope.rosettanet.interchange.openshipfromstockanddebitauthorizationstatusdistribution.v01_01",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.openshipfromstockanddebitauthorizationstatusdistribution.v01_01.OpenShipFromStockAndDebitAuthorizationStatusDistributionType",
+  "pipName" : "5D3",
+  "version" : "01_01",
+  "messageType" : "openshipfromstockanddebitauthorizationstatusdistribution",
+  "fields" : [ {
+    "name" : "documentHeader",
+    "type" : "DocumentHeader",
+    "cardinality" : "0..1",
+    "jaxbElement" : true,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "resource",
+    "type" : "ResourceType",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : true,
+    "description" : ""
+  }, {
+    "name" : "schemaVersion",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "class",
+    "type" : "Class<?>",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  } ]
+}

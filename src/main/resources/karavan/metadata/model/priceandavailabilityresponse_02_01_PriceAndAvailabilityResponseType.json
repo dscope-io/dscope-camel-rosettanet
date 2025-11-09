@@ -1,0 +1,37 @@
+{
+  "model" : "PriceAndAvailabilityResponseType",
+  "package" : "io.dscope.rosettanet.interchange.priceandavailabilityresponse.v02_01",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.priceandavailabilityresponse.v02_01.PriceAndAvailabilityResponseType",
+  "pipName" : "3A2",
+  "version" : "02_01",
+  "messageType" : "priceandavailabilityresponse",
+  "fields" : [ {
+    "name" : "documentHeader",
+    "type" : "DocumentHeader",
+    "cardinality" : "0..1",
+    "jaxbElement" : true,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "productPriceAndAvailability",
+    "type" : "List<ProductPriceAndAvailabilityType>",
+    "cardinality" : "0..n",
+    "jaxbElement" : false,
+    "required" : true,
+    "description" : ""
+  }, {
+    "name" : "schemaVersion",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "class",
+    "type" : "Class<?>",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  } ]
+}

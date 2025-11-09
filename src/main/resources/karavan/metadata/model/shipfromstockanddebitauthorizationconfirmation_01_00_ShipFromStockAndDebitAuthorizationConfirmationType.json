@@ -1,0 +1,37 @@
+{
+  "model" : "ShipFromStockAndDebitAuthorizationConfirmationType",
+  "package" : "io.dscope.rosettanet.interchange.shipfromstockanddebitauthorizationconfirmation.v01_00",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.shipfromstockanddebitauthorizationconfirmation.v01_00.ShipFromStockAndDebitAuthorizationConfirmationType",
+  "pipName" : "5D8",
+  "version" : "01_00",
+  "messageType" : "shipfromstockanddebitauthorizationconfirmation",
+  "fields" : [ {
+    "name" : "documentHeader",
+    "type" : "DocumentHeader",
+    "cardinality" : "0..1",
+    "jaxbElement" : true,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "resource",
+    "type" : "ResourceType",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : true,
+    "description" : ""
+  }, {
+    "name" : "schemaVersion",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "class",
+    "type" : "Class<?>",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  } ]
+}

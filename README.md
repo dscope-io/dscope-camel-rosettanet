@@ -87,6 +87,34 @@ Check out the [samples](samples/) directory for example implementations:
 
 - **[YAML PIP3A4 Sample](samples/yaml-pip3a4-sample/)** - Demonstrates YAML DSL routes for RosettaNet PIP3A4 Purchase Order processing
 
+## Apache Karavan Integration
+
+This component includes auto-generated metadata for [Apache Karavan](https://github.com/apache/camel-karavan), the visual designer for Apache Camel. The metadata enables visual design of RosettaNet routes with full type support.
+
+### Karavan Metadata Generation
+
+The component automatically generates Karavan metadata during the build process:
+
+- **Model metadata**: JSON files for all 200+ RosettaNet message types from the official RosettaNet Dictionary
+- **Field labels**: Human-friendly labels for message fields (e.g., "Purchase Order Request", "Ship To Location")
+- **Component metadata**: Component descriptor with PIP-specific attributes
+
+The metadata generator (`RosettaNetKaravanModelGenerator`) uses the RosettaNet Dictionary XML to create metadata for:
+- Purchase Order messages (PIP3A4)
+- Quote messages (PIP3A1, PIP3A2)
+- Shipping Order messages (PIP3B2)
+- Invoice messages (PIP3C3)
+- Forecast messages (PIP4A1, PIP4A2)
+- And many more PIPs across different versions
+
+To regenerate metadata:
+
+```bash
+mvn -Pkaravan-metadata compile exec:java
+```
+
+The generated files are located in `src/main/resources/karavan/metadata/`.
+
 ## Building
 
 To build the project:
@@ -95,7 +123,17 @@ To build the project:
 mvn clean package
 ```
 
-Note: This project requires Java 21. If you're using a different Java version, configure Maven toolchains accordingly.
+To install to local Maven repository:
+
+```bash
+mvn clean install
+```
+
+**Requirements:**
+- Java 21 (enforced via Maven toolchains)
+- Maven 3.6+
+
+If you're using a different Java version, configure Maven toolchains accordingly.
 
 ## License
 

@@ -1,0 +1,37 @@
+{
+  "model" : "ShippingOrderConfirmationType",
+  "package" : "io.dscope.rosettanet.interchange.shippingorderconfirmation.v02_02",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.shippingorderconfirmation.v02_02.ShippingOrderConfirmationType",
+  "pipName" : "3B12",
+  "version" : "02_02",
+  "messageType" : "shippingorderconfirmation",
+  "fields" : [ {
+    "name" : "documentHeader",
+    "type" : "DocumentHeader",
+    "cardinality" : "0..1",
+    "jaxbElement" : true,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "shippingOrder",
+    "type" : "ShippingOrderType",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : true,
+    "description" : ""
+  }, {
+    "name" : "schemaVersion",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "class",
+    "type" : "Class<?>",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  } ]
+}

@@ -1,0 +1,37 @@
+{
+  "model" : "QuoteRequestType",
+  "package" : "io.dscope.rosettanet.interchange.quoterequest.v02_00",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.quoterequest.v02_00.QuoteRequestType",
+  "pipName" : "3A1",
+  "version" : "02_00",
+  "messageType" : "quoterequest",
+  "fields" : [ {
+    "name" : "documentHeader",
+    "type" : "DocumentHeader",
+    "cardinality" : "0..1",
+    "jaxbElement" : true,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "quote",
+    "type" : "QuoteType",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : true,
+    "description" : ""
+  }, {
+    "name" : "schemaVersion",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "class",
+    "type" : "Class<?>",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  } ]
+}

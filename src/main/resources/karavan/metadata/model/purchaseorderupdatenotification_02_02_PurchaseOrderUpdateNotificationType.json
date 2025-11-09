@@ -1,0 +1,37 @@
+{
+  "model" : "PurchaseOrderUpdateNotificationType",
+  "package" : "io.dscope.rosettanet.interchange.purchaseorderupdatenotification.v02_02",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.purchaseorderupdatenotification.v02_02.PurchaseOrderUpdateNotificationType",
+  "pipName" : "3A7",
+  "version" : "02_02",
+  "messageType" : "purchaseorderupdatenotification",
+  "fields" : [ {
+    "name" : "documentHeader",
+    "type" : "DocumentHeader",
+    "cardinality" : "0..1",
+    "jaxbElement" : true,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "purchaseOrderUpdate",
+    "type" : "PurchaseOrderUpdateType",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : true,
+    "description" : ""
+  }, {
+    "name" : "schemaVersion",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "class",
+    "type" : "Class<?>",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  } ]
+}

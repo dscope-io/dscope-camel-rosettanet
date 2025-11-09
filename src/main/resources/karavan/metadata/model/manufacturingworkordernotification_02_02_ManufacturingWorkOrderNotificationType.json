@@ -1,0 +1,37 @@
+{
+  "model" : "ManufacturingWorkOrderNotificationType",
+  "package" : "io.dscope.rosettanet.interchange.manufacturingworkordernotification.v02_02",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.manufacturingworkordernotification.v02_02.ManufacturingWorkOrderNotificationType",
+  "pipName" : "7B5",
+  "version" : "02_02",
+  "messageType" : "manufacturingworkordernotification",
+  "fields" : [ {
+    "name" : "documentHeader",
+    "type" : "DocumentHeader",
+    "cardinality" : "0..1",
+    "jaxbElement" : true,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "workOrder",
+    "type" : "WorkOrderType",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : true,
+    "description" : ""
+  }, {
+    "name" : "schemaVersion",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "class",
+    "type" : "Class<?>",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  } ]
+}

@@ -1,0 +1,37 @@
+{
+  "model" : "ServiceEntitlementQueryType",
+  "package" : "io.dscope.rosettanet.interchange.serviceentitlementquery.v01_01",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.serviceentitlementquery.v01_01.ServiceEntitlementQueryType",
+  "pipName" : "6C1",
+  "version" : "01_01",
+  "messageType" : "serviceentitlementquery",
+  "fields" : [ {
+    "name" : "documentHeader",
+    "type" : "DocumentHeader",
+    "cardinality" : "0..1",
+    "jaxbElement" : true,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "serviceEntitlement",
+    "type" : "ServiceEntitlementType",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : true,
+    "description" : ""
+  }, {
+    "name" : "schemaVersion",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "class",
+    "type" : "Class<?>",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  } ]
+}

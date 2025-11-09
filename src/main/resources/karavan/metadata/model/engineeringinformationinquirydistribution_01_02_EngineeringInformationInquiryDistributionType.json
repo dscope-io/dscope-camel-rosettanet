@@ -1,0 +1,44 @@
+{
+  "model" : "EngineeringInformationInquiryDistributionType",
+  "package" : "io.dscope.rosettanet.interchange.engineeringinformationinquirydistribution.v01_02",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.engineeringinformationinquirydistribution.v01_02.EngineeringInformationInquiryDistributionType",
+  "pipName" : "2A16",
+  "version" : "01_02",
+  "messageType" : "engineeringinformationinquirydistribution",
+  "fields" : [ {
+    "name" : "documentHeader",
+    "type" : "DocumentHeader",
+    "cardinality" : "0..1",
+    "jaxbElement" : true,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "engineeringInformation",
+    "type" : "List<EngineeringInformationType>",
+    "cardinality" : "0..n",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "engineeringInformationHeader",
+    "type" : "EngineeringInformationHeaderType",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : true,
+    "description" : ""
+  }, {
+    "name" : "schemaVersion",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "class",
+    "type" : "Class<?>",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  } ]
+}

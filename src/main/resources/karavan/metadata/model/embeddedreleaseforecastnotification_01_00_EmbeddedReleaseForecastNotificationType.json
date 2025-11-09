@@ -1,0 +1,37 @@
+{
+  "model" : "EmbeddedReleaseForecastNotificationType",
+  "package" : "io.dscope.rosettanet.interchange.embeddedreleaseforecastnotification.v01_00",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.embeddedreleaseforecastnotification.v01_00.EmbeddedReleaseForecastNotificationType",
+  "pipName" : "4A2",
+  "version" : "01_00",
+  "messageType" : "embeddedreleaseforecastnotification",
+  "fields" : [ {
+    "name" : "documentHeader",
+    "type" : "DocumentHeader",
+    "cardinality" : "0..1",
+    "jaxbElement" : true,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "embeddedReleaseForecast",
+    "type" : "EmbeddedReleaseForecastType",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : true,
+    "description" : ""
+  }, {
+    "name" : "schemaVersion",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "class",
+    "type" : "Class<?>",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  } ]
+}

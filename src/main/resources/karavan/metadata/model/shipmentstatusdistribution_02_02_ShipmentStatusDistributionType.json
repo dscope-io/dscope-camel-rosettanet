@@ -1,0 +1,37 @@
+{
+  "model" : "ShipmentStatusDistributionType",
+  "package" : "io.dscope.rosettanet.interchange.shipmentstatusdistribution.v02_02",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.shipmentstatusdistribution.v02_02.ShipmentStatusDistributionType",
+  "pipName" : "3B3",
+  "version" : "02_02",
+  "messageType" : "shipmentstatusdistribution",
+  "fields" : [ {
+    "name" : "documentHeader",
+    "type" : "DocumentHeader",
+    "cardinality" : "0..1",
+    "jaxbElement" : true,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "shipmentStatus",
+    "type" : "ShipmentStatusType",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : true,
+    "description" : ""
+  }, {
+    "name" : "schemaVersion",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "class",
+    "type" : "Class<?>",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  } ]
+}

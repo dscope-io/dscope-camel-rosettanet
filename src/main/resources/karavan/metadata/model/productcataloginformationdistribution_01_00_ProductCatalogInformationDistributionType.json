@@ -1,0 +1,37 @@
+{
+  "model" : "ProductCatalogInformationDistributionType",
+  "package" : "io.dscope.rosettanet.interchange.productcataloginformationdistribution.v01_00",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.productcataloginformationdistribution.v01_00.ProductCatalogInformationDistributionType",
+  "pipName" : "2A1",
+  "version" : "01_00",
+  "messageType" : "productcataloginformationdistribution",
+  "fields" : [ {
+    "name" : "documentHeader",
+    "type" : "DocumentHeader",
+    "cardinality" : "0..1",
+    "jaxbElement" : true,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "productCatalog",
+    "type" : "ProductCatalogType",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : true,
+    "description" : ""
+  }, {
+    "name" : "schemaVersion",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "class",
+    "type" : "Class<?>",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  } ]
+}

@@ -1,0 +1,37 @@
+{
+  "model" : "SelfBillingInvoiceNotificationType",
+  "package" : "io.dscope.rosettanet.interchange.selfbillinginvoicenotification.v01_08",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.selfbillinginvoicenotification.v01_08.SelfBillingInvoiceNotificationType",
+  "pipName" : "3C7",
+  "version" : "01_08",
+  "messageType" : "selfbillinginvoicenotification",
+  "fields" : [ {
+    "name" : "documentHeader",
+    "type" : "DocumentHeader",
+    "cardinality" : "0..1",
+    "jaxbElement" : true,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "invoice",
+    "type" : "InvoiceType",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : true,
+    "description" : ""
+  }, {
+    "name" : "schemaVersion",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "class",
+    "type" : "Class<?>",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  } ]
+}

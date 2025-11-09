@@ -1,0 +1,167 @@
+= RosettaNet Document Processor Component
+:doctitle: RosettaNet Document Processor
+:shortname: rosettanet
+:artifactid: dscope-camel-rosettanet
+:description: Apache Camel RosettaNet Component
+:since: 4.15
+:supportlevel: Preview
+:tabs-sync-option:
+:component-header: Both producer and consumer are supported
+
+*Since Camel {since}*
+
+*{component-header}*
+
+The RosettaNet component provides support for marshalling and unmarshalling RosettaNet Partner Interface Process (PIP) XML messages. This component integrates with the RosettaNetJakartaJAXB library and includes comprehensive metadata for Apache Karavan visual designer.
+
+== Features
+
+* Support for 200+ RosettaNet message types across multiple PIP versions
+* Marshal (Java to XML) and unmarshal (XML to Java) operations
+* Apache Karavan metadata for visual route design
+* Automatic message type detection from headers
+* Version-aware message processing
+
+Maven users will need to add the following dependency to their `pom.xml` for this component:
+
+[source,xml]
+----
+<dependency>
+    <groupId>io.dscope</groupId>
+    <artifactId>dscope-camel-rosettanet</artifactId>
+    <version>0.1.0</version>
+</dependency>
+----
+
+== Supported PIPs
+
+The component supports a wide range of RosettaNet PIPs including:
+
+* *PIP3A1*: Quote Request/Confirmation
+* *PIP3A2*: Price and Availability Request/Response
+* *PIP3A4*: Purchase Order Management (Request/Confirmation/Change/Cancellation)
+* *PIP3B2*: Shipping Order Request/Confirmation
+* *PIP3C3*: Invoice Request/Confirmation
+* *PIP4A1*: Strategic Forecast Notification
+* *PIP4A2*: Planning/Threshold Release Forecast
+* *PIP9B3*: Certificate of Analysis Notification
+
+Each PIP supports multiple versions (e.g., 01_00, 02_00, 02_05).
+
+== Apache Karavan Integration
+
+This component includes auto-generated metadata for Apache Karavan, enabling visual design of RosettaNet routes with:
+
+* Full type support for 187+ message types
+* Intelligent field suggestions with human-friendly labels
+* PIP-specific endpoint configuration
+* Version-aware message selection
+
+The metadata is automatically generated from the RosettaNet Dictionary during the build process.
+
+== URI format
+
+----
+rosettanet:marshal[?options]
+rosettanet:unmarshal[?options]
+----
+
+
+// component-configure options: START
+// component-configure options: END
+
+// component options: START
+include::partial$component-configure-options.adoc[]
+include::partial$component-endpoint-options.adoc[]
+// component options: END
+
+// endpoint options: START
+// endpoint options: END
+
+
+== Usage
+
+The RosettaNet component supports marshalling (Java to XML) and unmarshalling (XML to Java) of RosettaNet PIP messages.
+
+=== Marshal
+
+To marshal a RosettaNet message object to XML:
+
+[source,java]
+----
+from("direct:start")
+    .to("rosettanet:marshal?pipType=PIP3A4&version=02_05&messageName=PurchaseOrderRequest");
+----
+
+=== Unmarshal
+
+To unmarshal XML to a RosettaNet message object:
+
+[source,java]
+----
+from("direct:start")
+    .to("rosettanet:unmarshal?pipType=PIP3A4&version=02_05&messageName=PurchaseOrderRequest");
+----
+
+== Examples
+
+=== Marshalling a Purchase Order Request
+
+[source,java]
+----
+from("direct:createPO")
+    .process(exchange -> {
+        // Create RosettaNet message object
+        PurchaseOrderRequestType po = new PurchaseOrderRequestType();
+        // ... populate the purchase order
+        exchange.getIn().setBody(po);
+    })
+    .to("rosettanet:marshal?pipType=PIP3A4&version=02_05&messageName=PurchaseOrderRequest&type=xml")
+    .to("file:output");
+----
+
+=== Unmarshalling a Purchase Order Request
+
+[source,java]
+----
+from("file:input?noop=true")
+    .to("rosettanet:unmarshal?pipType=PIP3A4&version=02_05&messageName=PurchaseOrderRequest")
+    .process(exchange -> {
+        PurchaseOrderRequestType po = exchange.getIn().getBody(PurchaseOrderRequestType.class);
+        // ... process the purchase order
+    });
+----
+
+=== Using Headers for Dynamic Message Types
+
+[source,java]
+----
+from("jms:queue:rosettanet-inbound")
+    .setHeader("pipType", simple("${header.RN-PIP-Type}"))
+    .setHeader("version", simple("${header.RN-Version}"))
+    .setHeader("messageName", simple("${header.RN-Message-Name}"))
+    .to("rosettanet:unmarshal")
+    .choice()
+        .when(header("pipType").isEqualTo("PIP3A4"))
+            .to("direct:processPurchaseOrder")
+        .when(header("pipType").isEqualTo("PIP3B2"))
+            .to("direct:processShippingOrder")
+        .otherwise()
+            .to("direct:handleUnknownMessage");
+----
+
+== Metadata Generation
+
+To regenerate Karavan metadata for development:
+
+----
+mvn -Pkaravan-metadata compile exec:java
+----
+
+This generates:
+* Model JSON files for all RosettaNet message types
+* Field labels for human-friendly display
+* Component metadata for Karavan integration
+
+
+include::spring-boot:partial$starter.adoc[]

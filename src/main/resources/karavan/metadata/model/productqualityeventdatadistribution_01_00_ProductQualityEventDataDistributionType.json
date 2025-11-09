@@ -1,0 +1,37 @@
+{
+  "model" : "ProductQualityEventDataDistributionType",
+  "package" : "io.dscope.rosettanet.interchange.productqualityeventdatadistribution.v01_00",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.productqualityeventdatadistribution.v01_00.ProductQualityEventDataDistributionType",
+  "pipName" : "7C6",
+  "version" : "01_00",
+  "messageType" : "productqualityeventdatadistribution",
+  "fields" : [ {
+    "name" : "documentHeader",
+    "type" : "DocumentHeader",
+    "cardinality" : "0..1",
+    "jaxbElement" : true,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "productQualityEventData",
+    "type" : "ProductQualityEventDataType",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : true,
+    "description" : ""
+  }, {
+    "name" : "schemaVersion",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "class",
+    "type" : "Class<?>",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  } ]
+}

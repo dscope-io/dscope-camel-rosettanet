@@ -1,0 +1,37 @@
+{
+  "model" : "PurchaseOrderCancellationConfirmationType",
+  "package" : "io.dscope.rosettanet.interchange.purchaseordercancellationconfirmation.v02_00",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.purchaseordercancellationconfirmation.v02_00.PurchaseOrderCancellationConfirmationType",
+  "pipName" : "3A9",
+  "version" : "02_00",
+  "messageType" : "purchaseordercancellationconfirmation",
+  "fields" : [ {
+    "name" : "documentHeader",
+    "type" : "DocumentHeader",
+    "cardinality" : "0..1",
+    "jaxbElement" : true,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "purchaseOrderCancellation",
+    "type" : "PurchaseOrderCancellationType",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : true,
+    "description" : ""
+  }, {
+    "name" : "schemaVersion",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "class",
+    "type" : "Class<?>",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  } ]
+}

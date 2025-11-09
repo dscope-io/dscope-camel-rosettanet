@@ -1,0 +1,37 @@
+{
+  "model" : "ShippingOrderRequestType",
+  "package" : "io.dscope.rosettanet.interchange.shippingorderrequest.v02_04",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.shippingorderrequest.v02_04.ShippingOrderRequestType",
+  "pipName" : "3B12",
+  "version" : "02_04",
+  "messageType" : "shippingorderrequest",
+  "fields" : [ {
+    "name" : "documentHeader",
+    "type" : "DocumentHeader",
+    "cardinality" : "0..1",
+    "jaxbElement" : true,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "shippingOrder",
+    "type" : "ShippingOrderType",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : true,
+    "description" : ""
+  }, {
+    "name" : "schemaVersion",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "class",
+    "type" : "Class<?>",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  } ]
+}

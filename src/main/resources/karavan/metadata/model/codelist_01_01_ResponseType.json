@@ -1,0 +1,51 @@
+{
+  "model" : "ResponseType",
+  "package" : "io.dscope.rosettanet.interchange.codelist.response.v01_01",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.codelist.response.v01_01.ResponseType",
+  "pipName" : "UNKNOWN",
+  "version" : "01_01",
+  "messageType" : "codelist",
+  "fields" : [ {
+    "name" : "value",
+    "type" : "ResponseContentType",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "identifier",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "codeListVersion",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "agency",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "schemaVersion",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "class",
+    "type" : "Class<?>",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  } ]
+}

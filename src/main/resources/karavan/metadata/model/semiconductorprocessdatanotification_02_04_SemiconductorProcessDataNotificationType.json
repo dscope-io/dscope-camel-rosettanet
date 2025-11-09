@@ -1,0 +1,37 @@
+{
+  "model" : "SemiconductorProcessDataNotificationType",
+  "package" : "io.dscope.rosettanet.interchange.semiconductorprocessdatanotification.v02_04",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.semiconductorprocessdatanotification.v02_04.SemiconductorProcessDataNotificationType",
+  "pipName" : "7C8",
+  "version" : "02_04",
+  "messageType" : "semiconductorprocessdatanotification",
+  "fields" : [ {
+    "name" : "documentHeader",
+    "type" : "DocumentHeader",
+    "cardinality" : "0..1",
+    "jaxbElement" : true,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "lotReport",
+    "type" : "LotReportType",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : true,
+    "description" : ""
+  }, {
+    "name" : "schemaVersion",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "class",
+    "type" : "Class<?>",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  } ]
+}

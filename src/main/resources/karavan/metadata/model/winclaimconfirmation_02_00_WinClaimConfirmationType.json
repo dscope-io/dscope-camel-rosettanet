@@ -1,0 +1,37 @@
+{
+  "model" : "WinClaimConfirmationType",
+  "package" : "io.dscope.rosettanet.interchange.winclaimconfirmation.v02_00",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.winclaimconfirmation.v02_00.WinClaimConfirmationType",
+  "pipName" : "5C3",
+  "version" : "02_00",
+  "messageType" : "winclaimconfirmation",
+  "fields" : [ {
+    "name" : "designWinClaim",
+    "type" : "DesignWinClaimType",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : true,
+    "description" : ""
+  }, {
+    "name" : "documentHeader",
+    "type" : "DocumentHeader",
+    "cardinality" : "0..1",
+    "jaxbElement" : true,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "schemaVersion",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "class",
+    "type" : "Class<?>",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  } ]
+}

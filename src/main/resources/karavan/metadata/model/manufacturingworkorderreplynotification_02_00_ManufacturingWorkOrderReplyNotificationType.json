@@ -1,0 +1,37 @@
+{
+  "model" : "ManufacturingWorkOrderReplyNotificationType",
+  "package" : "io.dscope.rosettanet.interchange.manufacturingworkorderreplynotification.v02_00",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.manufacturingworkorderreplynotification.v02_00.ManufacturingWorkOrderReplyNotificationType",
+  "pipName" : "7B6",
+  "version" : "02_00",
+  "messageType" : "manufacturingworkorderreplynotification",
+  "fields" : [ {
+    "name" : "documentHeader",
+    "type" : "DocumentHeader",
+    "cardinality" : "0..1",
+    "jaxbElement" : true,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "workOrderReply",
+    "type" : "WorkOrderReplyType",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : true,
+    "description" : ""
+  }, {
+    "name" : "schemaVersion",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "class",
+    "type" : "Class<?>",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  } ]
+}

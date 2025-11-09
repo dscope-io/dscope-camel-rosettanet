@@ -1,0 +1,37 @@
+{
+  "model" : "ShippingDocumentationNotificationType",
+  "package" : "io.dscope.rosettanet.interchange.shippingdocumentationnotification.v02_06",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.shippingdocumentationnotification.v02_06.ShippingDocumentationNotificationType",
+  "pipName" : "3B18",
+  "version" : "02_06",
+  "messageType" : "shippingdocumentationnotification",
+  "fields" : [ {
+    "name" : "documentHeader",
+    "type" : "DocumentHeader",
+    "cardinality" : "0..1",
+    "jaxbElement" : true,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "shippingBusinessDocument",
+    "type" : "List<ShippingBusinessDocumentType>",
+    "cardinality" : "0..n",
+    "jaxbElement" : false,
+    "required" : true,
+    "description" : ""
+  }, {
+    "name" : "schemaVersion",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "class",
+    "type" : "Class<?>",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  } ]
+}

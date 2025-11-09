@@ -83,8 +83,74 @@
             <resource>
                 <directory>src/main/resources</directory>
             </resource>
-        </resources>	
+        </resources>
+        <pluginManagement>
+            <plugins>
+                <!-- This plugin configuration is used to store Eclipse m2e settings only. -->
+                <!-- It has no influence on the Maven build itself. -->
+                <plugin>
+                    <groupId>org.eclipse.m2e</groupId>
+                    <artifactId>lifecycle-mapping</artifactId>
+                    <version>1.0.0</version>
+                    <configuration>
+                        <lifecycleMappingMetadata>
+                            <pluginExecutions>
+                                <pluginExecution>
+                                    <pluginExecutionFilter>
+                                        <groupId>org.apache.camel</groupId>
+                                        <artifactId>camel-package-maven-plugin</artifactId>
+                                        <versionRange>[4.0,)</versionRange>
+                                        <goals>
+                                            <goal>generate</goal>
+                                            <goal>generate-postcompile</goal>
+                                        </goals>
+                                    </pluginExecutionFilter>
+                                    <action>
+                                        <execute>
+                                            <runOnIncremental>false</runOnIncremental>
+                                        </execute>
+                                    </action>
+                                </pluginExecution>
+                            </pluginExecutions>
+                        </lifecycleMappingMetadata>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>	
         <plugins>
+            <plugin>
+                <groupId>org.apache.camel</groupId>
+                <artifactId>camel-package-maven-plugin</artifactId>
+                <version>${camel.version}</version>
+                <configuration>
+                    <!-- set to true to make build fail fast if missing documentation in docs files -->
+                    <failFast>true</failFast>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>generate</id>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <phase>process-classes</phase>
+                    </execution>
+                    <execution>
+                        <id>generate-postcompile</id>
+                        <goals>
+                            <goal>generate-postcompile</goal>
+                        </goals>
+                        <phase>prepare-package</phase>
+                    </execution>
+                </executions>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.camel</groupId>
+                        <artifactId>camel-core-model</artifactId>
+                        <version>${camel.version}</version>
+                        <scope>compile</scope>
+                    </dependency>
+                </dependencies>
+            </plugin>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${version.plugin.compiler}</version>
@@ -120,6 +186,7 @@
                         <artifactId>exec-maven-plugin</artifactId>
                         <version>3.3.0</version>
                         <configuration>
+                            <mainClass>io.dscope.tools.karavan.RosettaNetKaravanModelGenerator</mainClass>
                             <classpathScope>compile</classpathScope>
                         </configuration>
                     </plugin>

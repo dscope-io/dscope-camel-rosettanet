@@ -1,0 +1,51 @@
+{
+  "model" : "CaseRequestNotificationType",
+  "package" : "io.dscope.rosettanet.interchange.caserequestnotification.v02_02",
+  "qualifiedName" : "io.dscope.rosettanet.interchange.caserequestnotification.v02_02.CaseRequestNotificationType",
+  "pipName" : "6C3",
+  "version" : "02_02",
+  "messageType" : "caserequestnotification",
+  "fields" : [ {
+    "name" : "_case",
+    "type" : "CaseType",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : true,
+    "description" : ""
+  }, {
+    "name" : "documentHeader",
+    "type" : "DocumentHeader",
+    "cardinality" : "0..1",
+    "jaxbElement" : true,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "messageInformation",
+    "type" : "MessageInformation",
+    "cardinality" : "0..1",
+    "jaxbElement" : true,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "schemaVersion",
+    "type" : "String",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "case",
+    "type" : "CaseType",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  }, {
+    "name" : "class",
+    "type" : "Class<?>",
+    "cardinality" : "0..1",
+    "jaxbElement" : false,
+    "required" : false,
+    "description" : ""
+  } ]
+}
