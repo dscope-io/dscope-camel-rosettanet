@@ -9,19 +9,71 @@ This component provides marshalling and unmarshalling capabilities for RosettaNe
 ## Requirements
 
 - Java 21+
-- Apache Camel 4.14.1+
+- Apache Camel 4.15.0+
 - Maven 3.6+
 
 ## Installation
 
-Add the dependency to your Maven project:
+### Maven (from Maven Central)
+
+Add the dependency to your `pom.xml`:
 
 ```xml
 <dependency>
     <groupId>io.dscope</groupId>
     <artifactId>dscope-camel-rosettanet</artifactId>
-    <version>0.1.0</version>
+    <version>1.0.0</version>
 </dependency>
+```
+
+### Gradle (from Maven Central)
+
+Groovy DSL (`build.gradle`):
+
+```groovy
+dependencies {
+    implementation 'io.dscope:dscope-camel-rosettanet:1.0.0'
+}
+```
+
+Kotlin DSL (`build.gradle.kts`):
+
+```kotlin
+dependencies {
+    implementation("io.dscope:dscope-camel-rosettanet:1.0.0")
+}
+```
+
+### Local development (before Central release)
+
+If you are consuming locally built snapshots/releases from this repository:
+
+1. Build and install locally:
+
+```bash
+mvn clean install
+```
+
+2. Ensure your consumer project can resolve from local Maven cache.
+
+Maven consumer (`pom.xml`):
+
+```xml
+<repositories>
+    <repository>
+        <id>local-maven</id>
+        <url>file://${user.home}/.m2/repository</url>
+    </repository>
+</repositories>
+```
+
+Gradle consumer (`build.gradle` / `build.gradle.kts`):
+
+```groovy
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
 ```
 
 ## Usage

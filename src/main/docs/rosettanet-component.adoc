@@ -29,8 +29,41 @@ Maven users will need to add the following dependency to their `pom.xml` for thi
 <dependency>
     <groupId>io.dscope</groupId>
     <artifactId>dscope-camel-rosettanet</artifactId>
-    <version>0.1.0</version>
+    <version>1.0.0</version>
 </dependency>
+----
+
+Gradle users can add this dependency:
+
+[source,groovy]
+----
+dependencies {
+    implementation 'io.dscope:dscope-camel-rosettanet:1.0.0'
+}
+----
+
+For local development consumption (for example when testing unpublished changes), add local Maven repository resolution.
+
+Maven consumer repository configuration:
+
+[source,xml]
+----
+<repositories>
+    <repository>
+        <id>local-maven</id>
+        <url>file://${user.home}/.m2/repository</url>
+    </repository>
+</repositories>
+----
+
+Gradle repository configuration:
+
+[source,groovy]
+----
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
 ----
 
 == Supported PIPs
