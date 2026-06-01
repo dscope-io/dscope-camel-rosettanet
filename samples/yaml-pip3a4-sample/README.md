@@ -67,7 +67,7 @@ This route demonstrates creating and marshalling a PIP3A4 message:
 
 - Java 21 or higher
 - Maven 3.6+
-- Access to the dscope-camel-rosettanet component (version 1.0.0)
+- Access to the dscope-camel-rosettanet component (version 1.1.0)
 
 ## Building the Sample
 
@@ -75,7 +75,7 @@ This route demonstrates creating and marshalling a PIP3A4 message:
 mvn clean package
 ```
 
-**Note:** This sample requires the `dscope-camel-rosettanet` component to be available. Version `1.0.0` is available from Maven Central. If building from the parent repository, you can also install the component locally first:
+**Note:** This sample requires the `dscope-camel-rosettanet` component to be available. Version `1.1.0` is available from Maven Central. If building from the parent repository, you can also install the component locally first:
 
 ```bash
 # From the parent repository root

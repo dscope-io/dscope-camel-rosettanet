@@ -9,7 +9,7 @@ This component provides marshalling and unmarshalling capabilities for RosettaNe
 ## Requirements
 
 - Java 21+
-- Apache Camel 4.15.0+
+- Apache Camel 4.20.0+
 - Maven 3.6+
 
 ## Installation
@@ -22,7 +22,7 @@ Add the dependency to your `pom.xml`:
 <dependency>
     <groupId>io.dscope</groupId>
     <artifactId>dscope-camel-rosettanet</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
 </dependency>
 ```
 
@@ -32,7 +32,7 @@ Groovy DSL (`build.gradle`):
 
 ```groovy
 dependencies {
-    implementation 'io.dscope:dscope-camel-rosettanet:1.0.0'
+    implementation 'io.dscope:dscope-camel-rosettanet:1.1.0'
 }
 ```
 
@@ -40,7 +40,7 @@ Kotlin DSL (`build.gradle.kts`):
 
 ```kotlin
 dependencies {
-    implementation("io.dscope:dscope-camel-rosettanet:1.0.0")
+    implementation("io.dscope:dscope-camel-rosettanet:1.1.0")
 }
 ```
 

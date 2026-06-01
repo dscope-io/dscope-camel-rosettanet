@@ -6,7 +6,7 @@
 
     <groupId>io.dscope.samples</groupId>
     <artifactId>yaml-pip3a4-sample</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.1.0-SNAPSHOT</version>
     <name>RosettaNet PIP3A4 YAML Route Sample</name>
     <description>Sample Camel application demonstrating YAML DSL routes with RosettaNet PIP3A4</description>
 
@@ -15,7 +15,7 @@
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <camel.version>4.15.0</camel.version>
+        <camel.version>4.20.0</camel.version>
         <slf4j.version>2.0.17</slf4j.version>
         <main.class>org.apache.camel.main.Main</main.class>
     </properties>
@@ -53,7 +53,7 @@
         <dependency>
             <groupId>io.dscope</groupId>
             <artifactId>dscope-camel-rosettanet</artifactId>
-            <version>1.0.0</version>
+            <version>1.1.0</version>
         </dependency>
 
         <!-- Camel Jackson for JSON support -->
